@@ -101,7 +101,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="css">
 pre.changes {
   max-width: 250px;
   margin-bottom: 0;

@@ -72,7 +72,7 @@
   </b-modal>
 </template>
 
-<style lang="scss">
+<style lang="css">
 table.sortable {
   cursor: pointer;
 }

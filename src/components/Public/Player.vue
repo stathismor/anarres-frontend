@@ -122,128 +122,111 @@
   </div>
 </template>
 
-<style lang="scss">
-.radio-player-widget {
-  .now-playing-details {
-    display: flex;
-    align-items: center;
-
-    .now-playing-art {
-      padding-right: 0.5rem;
-
-      img {
-        width: 75px;
-        height: auto;
-        border-radius: 5px;
-
-        @media (max-width: 575px) {
-          width: 50px;
-        }
-      }
-    }
-
-    .now-playing-main {
-      flex: 1;
-      min-width: 0;
-    }
-
-    h4,
-    h5,
-    h6 {
-      margin: 0;
-      line-height: 1.3;
-    }
-
-    h4 {
-      font-size: 15px;
-    }
-
-    h5 {
-      font-size: 13px;
-      font-weight: normal;
-    }
-
-    h6 {
-      font-size: 11px;
-      font-weight: normal;
-    }
-
-    .now-playing-title,
-    .now-playing-artist {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-
-      &:hover {
-        text-overflow: clip;
-        white-space: normal;
-        word-break: break-all;
-      }
-    }
-
-    .time-display {
-      font-size: 10px;
-      margin-top: 0.25rem;
-      flex-direction: row;
-      align-items: center;
-      display: flex;
-
-      .time-display-played {
-        margin-right: 0.5rem;
-      }
-
-      .time-display-progress {
-        flex: 1 1 auto;
-
-        .progress-bar {
-          -webkit-transition: width 1s; /* Safari */
-          transition: width 1s;
-          transition-timing-function: linear;
-        }
-      }
-
-      .time-display-total {
-        margin-left: 0.5rem;
-      }
-    }
+<style lang="css">
+.radio-player-widget .now-playing-details {
+  display: flex;
+  align-items: center;
+}
+.radio-player-widget .now-playing-details .now-playing-art {
+  padding-right: 0.5rem;
+}
+.radio-player-widget .now-playing-details .now-playing-art img {
+  width: 75px;
+  height: auto;
+  border-radius: 5px;
+}
+@media (max-width: 575px) {
+  .radio-player-widget .now-playing-details .now-playing-art img {
+    width: 50px;
   }
-
-  hr {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  i.material-icons {
-    line-height: 1;
-  }
-
-  .radio-controls {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    .radio-control-play-button {
-      margin-right: 0.25rem;
-    }
-
-    .radio-control-select-stream {
-      flex: 1 1 auto;
-    }
-
-    .radio-control-mute-button,
-    .radio-control-max-volume-button {
-      flex-shrink: 0;
-    }
-
-    .radio-control-volume-slider {
-      flex: 1 1 auto;
-      max-width: 30%;
-
-      input {
-        height: 10px;
-      }
-    }
-  }
+}
+.radio-player-widget .now-playing-details .now-playing-main {
+  flex: 1;
+  min-width: 0;
+}
+.radio-player-widget .now-playing-details h4,
+.radio-player-widget .now-playing-details h5,
+.radio-player-widget .now-playing-details h6 {
+  margin: 0;
+  line-height: 1.3;
+}
+.radio-player-widget .now-playing-details h4 {
+  font-size: 15px;
+}
+.radio-player-widget .now-playing-details h5 {
+  font-size: 13px;
+  font-weight: normal;
+}
+.radio-player-widget .now-playing-details h6 {
+  font-size: 11px;
+  font-weight: normal;
+}
+.radio-player-widget .now-playing-details .now-playing-title,
+.radio-player-widget .now-playing-details .now-playing-artist {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.radio-player-widget .now-playing-details .now-playing-title:hover,
+.radio-player-widget .now-playing-details .now-playing-artist:hover {
+  text-overflow: clip;
+  white-space: normal;
+  word-break: break-all;
+}
+.radio-player-widget .now-playing-details .time-display {
+  font-size: 10px;
+  margin-top: 0.25rem;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+.radio-player-widget .now-playing-details .time-display .time-display-played {
+  margin-right: 0.5rem;
+}
+.radio-player-widget .now-playing-details .time-display .time-display-progress {
+  flex: 1 1 auto;
+}
+.radio-player-widget
+  .now-playing-details
+  .time-display
+  .time-display-progress
+  .progress-bar {
+  -webkit-transition: width 1s;
+  /* Safari */
+  transition: width 1s;
+  transition-timing-function: linear;
+}
+.radio-player-widget .now-playing-details .time-display .time-display-total {
+  margin-left: 0.5rem;
+}
+.radio-player-widget hr {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.radio-player-widget i.material-icons {
+  line-height: 1;
+}
+.radio-player-widget .radio-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.radio-player-widget .radio-controls .radio-control-play-button {
+  margin-right: 0.25rem;
+}
+.radio-player-widget .radio-controls .radio-control-select-stream {
+  flex: 1 1 auto;
+}
+.radio-player-widget .radio-controls .radio-control-mute-button,
+.radio-player-widget .radio-controls .radio-control-max-volume-button {
+  flex-shrink: 0;
+}
+.radio-player-widget .radio-controls .radio-control-volume-slider {
+  flex: 1 1 auto;
+  max-width: 30%;
+}
+.radio-player-widget .radio-controls .radio-control-volume-slider input {
+  height: 10px;
 }
 </style>
 

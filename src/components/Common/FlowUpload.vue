@@ -46,40 +46,31 @@
   </div>
 </template>
 
-<style lang="scss">
-div.flow-upload {
-  div.upload-progress {
-    padding: 4px 0;
-
-    & > div {
-      padding: 3px 0;
-    }
-
-    .error {
-      color: #a00;
-    }
-
-    .progress {
-      margin-bottom: 5px;
-
-      .progress-bar {
-        border-bottom-width: 10px;
-
-        &::after {
-          height: 10px;
-        }
-      }
-    }
-  }
-
-  div.file-drop-target {
-    padding: 25px 0;
-    text-align: center;
-
-    input {
-      display: inline;
-    }
-  }
+<style lang="css">
+div.flow-upload div.upload-progress {
+  padding: 4px 0;
+}
+div.flow-upload div.upload-progress > div {
+  padding: 3px 0;
+}
+div.flow-upload div.upload-progress .error {
+  color: #a00;
+}
+div.flow-upload div.upload-progress .progress {
+  margin-bottom: 5px;
+}
+div.flow-upload div.upload-progress .progress .progress-bar {
+  border-bottom-width: 10px;
+}
+div.flow-upload div.upload-progress .progress .progress-bar::after {
+  height: 10px;
+}
+div.flow-upload div.file-drop-target {
+  padding: 25px 0;
+  text-align: center;
+}
+div.flow-upload div.file-drop-target input {
+  display: inline;
 }
 </style>
 

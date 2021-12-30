@@ -78,45 +78,34 @@
   </section>
 </template>
 
-<style lang="scss">
-.ondemand.embed {
-  .container {
-    max-width: 100%;
-    padding: 0 !important;
-  }
+<style lang="css">
+.ondemand.embed .container {
+  max-width: 100%;
+  padding: 0 !important;
 }
-
-#station_on_demand_table {
-  .datatable-main {
-    overflow-y: auto;
-  }
-
-  table.b-table {
-    thead tr th:nth-child(1),
-    tbody tr td:nth-child(1) {
-      padding-right: 0.75rem;
-      width: 3rem;
-      white-space: nowrap;
-    }
-
-    thead tr th:nth-child(2),
-    tbody tr td:nth-child(2) {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      width: 40px;
-    }
-
-    thead tr th:nth-child(3),
-    tbody tr td:nth-child(3) {
-      padding-left: 0.5rem;
-    }
-  }
-
-  img.media_manager_album_art {
-    width: 40px;
-    height: auto;
-    border-radius: 5px;
-  }
+#station_on_demand_table .datatable-main {
+  overflow-y: auto;
+}
+#station_on_demand_table table.b-table thead tr th:nth-child(1),
+#station_on_demand_table table.b-table tbody tr td:nth-child(1) {
+  padding-right: 0.75rem;
+  width: 3rem;
+  white-space: nowrap;
+}
+#station_on_demand_table table.b-table thead tr th:nth-child(2),
+#station_on_demand_table table.b-table tbody tr td:nth-child(2) {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 40px;
+}
+#station_on_demand_table table.b-table thead tr th:nth-child(3),
+#station_on_demand_table table.b-table tbody tr td:nth-child(3) {
+  padding-left: 0.5rem;
+}
+#station_on_demand_table img.media_manager_album_art {
+  width: 40px;
+  height: auto;
+  border-radius: 5px;
 }
 </style>
 

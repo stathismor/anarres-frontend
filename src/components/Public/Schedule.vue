@@ -34,14 +34,11 @@
   </section>
 </template>
 
-<style lang="scss">
-.schedule.embed {
-  .container {
-    max-width: 100%;
-    padding: 0 !important;
-  }
+<style lang="css">
+.schedule.embed .container {
+  max-width: 100%;
+  padding: 0 !important;
 }
-
 #station-schedule-calendar {
   overflow-y: auto;
 }

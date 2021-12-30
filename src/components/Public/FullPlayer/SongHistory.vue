@@ -18,63 +18,54 @@
   </div>
 </template>
 
-<style lang="scss">
-#station-history {
-  .song {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    line-height: normal;
-    margin-bottom: 15px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .order {
-      display: flex;
-      flex-direction: column;
-      width: 35px;
-      justify-content: center;
-      margin-right: 5px;
-      text-align: center;
-    }
-
-    .art {
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      margin-right: 5px;
-    }
-
-    .name {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .date-played {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 4px 0 0 40px;
-    }
-
-    .break {
-      flex-basis: 100%;
-      height: 0;
-    }
-
-    @media (min-width: 576px) {
-      .date-played {
-        margin-left: auto;
-      }
-      .break {
-        display: none;
-      }
-    }
+<style lang="css">
+#station-history .song {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+#station-history .song:last-child {
+  margin-bottom: 0;
+}
+#station-history .song .order {
+  display: flex;
+  flex-direction: column;
+  width: 35px;
+  justify-content: center;
+  margin-right: 5px;
+  text-align: center;
+}
+#station-history .song .art {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+#station-history .song .name {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+#station-history .song .date-played {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4px 0 0 40px;
+}
+#station-history .song .break {
+  flex-basis: 100%;
+  height: 0;
+}
+@media (min-width: 576px) {
+  #station-history .song .date-played {
+    margin-left: auto;
+  }
+  #station-history .song .break {
+    display: none;
   }
 }
 </style>

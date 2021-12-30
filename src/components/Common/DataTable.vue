@@ -180,37 +180,29 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="css">
 div.datatable-main {
   flex: 1;
 }
-
 div.datatable-toolbar-top,
 div.datatable-toolbar-bottom {
   flex: 0;
   padding: 0;
 }
-
-table.b-table {
-  td.shrink {
-    width: 0.1%;
-    white-space: nowrap;
-  }
+table.b-table td.shrink {
+  width: 0.1%;
+  white-space: nowrap;
 }
-
-table.b-table-selectable {
-  thead tr th:nth-child(1),
-  tbody tr td:nth-child(1),
-  tbody tr th:nth-child(1) {
-    padding-right: 0.75rem;
-    width: 3rem;
-  }
-
-  thead tr th:nth-child(2),
-  tbody tr td:nth-child(2),
-  tbody tr th:nth-child(2) {
-    padding-left: 0.5rem;
-  }
+table.b-table-selectable thead tr th:nth-child(1),
+table.b-table-selectable tbody tr td:nth-child(1),
+table.b-table-selectable tbody tr th:nth-child(1) {
+  padding-right: 0.75rem;
+  width: 3rem;
+}
+table.b-table-selectable thead tr th:nth-child(2),
+table.b-table-selectable tbody tr td:nth-child(2),
+table.b-table-selectable tbody tr th:nth-child(2) {
+  padding-left: 0.5rem;
 }
 </style>
 

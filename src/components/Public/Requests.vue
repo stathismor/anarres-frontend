@@ -33,7 +33,7 @@
   </data-table>
 </template>
 
-<style lang="scss">
+<style lang="css">
 img.album_art {
   width: 40px;
   height: auto;

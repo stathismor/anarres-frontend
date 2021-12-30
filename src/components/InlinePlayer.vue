@@ -73,25 +73,20 @@
   </div>
 </template>
 
-<style lang="scss">
-.player-inline {
-  .inline-seek {
-    width: 300px;
-
-    div.time-display {
-      font-size: 90%;
-    }
-  }
-
-  .inline-volume-controls {
-    width: 175px;
-  }
-
-  input.player-volume-range,
-  input.player-seek-range {
-    width: 100%;
-    height: 10px;
-  }
+<style lang="css">
+.player-inline .inline-seek {
+  width: 300px;
+}
+.player-inline .inline-seek div.time-display {
+  font-size: 90%;
+}
+.player-inline .inline-volume-controls {
+  width: 175px;
+}
+.player-inline input.player-volume-range,
+.player-inline input.player-seek-range {
+  width: 100%;
+  height: 10px;
 }
 </style>
 
