@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <full-player />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,6 +8,15 @@
     <router-view />
   </div>
 </template>
+
+<script type="text/javascript">
+import FullPlayer from './components/FullPlayer.vue';
+export default {
+  components: {
+    FullPlayer, // register component
+  },
+};
+</script>
 
 <style>
 #app {
