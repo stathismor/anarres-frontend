@@ -91,10 +91,10 @@
 </style>
 
 <script>
-import AudioPlayer from '~/components/Common/AudioPlayer';
+import AudioPlayer from './Common/AudioPlayer';
 import formatTime from '~/functions/formatTime.js';
-import Icon from '~/components/Common/Icon';
-import store from '~/store.js';
+import Icon from './Common/Icon';
+import store from '../store.js';
 
 export default {
   components: { Icon, AudioPlayer },

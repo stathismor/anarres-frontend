@@ -73,7 +73,7 @@
 import WaveSurfer from 'wavesurfer.js';
 import timeline from 'wavesurfer.js/dist/plugin/wavesurfer.timeline.js';
 import regions from 'wavesurfer.js/dist/plugin/wavesurfer.regions.js';
-import getLogarithmicVolume from '~/functions/getLogarithmicVolume.js';
+import getLogarithmicVolume from '../../functions/getLogarithmicVolume.js';
 import store from 'store';
 import Icon from './Icon';
 

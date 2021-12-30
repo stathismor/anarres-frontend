@@ -52,9 +52,9 @@
 <script>
 import { validationMixin } from 'vuelidate';
 import { required } from 'vuelidate/dist/validators.min.js';
-import BWrappedFormGroup from '~/components/Form/BWrappedFormGroup';
-import Icon from '~/components/Common/Icon';
-import validatePassword from '~/functions/validatePassword.js';
+import BWrappedFormGroup from './Form/BWrappedFormGroup';
+import Icon from './Common/Icon';
+import validatePassword from '../functions/validatePassword.js';
 
 export default {
   name: 'SetupRegister',

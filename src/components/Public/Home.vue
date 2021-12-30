@@ -56,7 +56,7 @@
 import RadioPlayer, { radioPlayerProps } from './Player.vue';
 import SongHistoryModal from './FullPlayer/SongHistoryModal';
 import RequestModal from './FullPlayer/RequestModal';
-import Icon from '~/components/Common/Icon';
+import Icon from '../Common/Icon';
 
 export default {
   inheritAttrs: false,

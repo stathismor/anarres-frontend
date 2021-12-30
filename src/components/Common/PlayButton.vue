@@ -7,9 +7,9 @@
 <script>
 import Icon from './Icon';
 
-import getUrlWithoutQuery from '~/functions/getUrlWithoutQuery';
+import getUrlWithoutQuery from '../../functions/getUrlWithoutQuery';
 
-import store from '~/store.js';
+import store from '../../store.js';
 
 export default {
   name: 'PlayButton',

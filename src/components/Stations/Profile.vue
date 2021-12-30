@@ -64,7 +64,7 @@ import {
   BACKEND_NONE,
   FRONTEND_REMOTE,
 } from '~/components/Entity/RadioAdapters.js';
-import NowPlaying from '~/components/Entity/NowPlaying';
+import NowPlaying from '../Entity/NowPlaying';
 
 export default {
   inheritAttrs: false,

@@ -42,9 +42,9 @@ img.album_art {
 </style>
 
 <script>
-import DataTable from '~/components/Common/DataTable';
+import DataTable from '../Common/DataTable';
 import _ from 'lodash';
-import AlbumArt from '~/components/Common/AlbumArt';
+import AlbumArt from '../Common/AlbumArt';
 
 export default {
   components: { AlbumArt, DataTable },

@@ -105,13 +105,13 @@
 </template>
 
 <script>
-import DataTable from '~/components/Common/DataTable';
+import DataTable from '../../Common/DataTable';
 import EditModal from './EpisodeEditModal';
-import Icon from '~/components/Common/Icon';
-import AlbumArt from '~/components/Common/AlbumArt';
+import Icon from '../../Common/Icon';
+import AlbumArt from '../../Common/AlbumArt';
 import EpisodeFormBasicInfo from './EpisodeForm/BasicInfo';
 import PodcastCommonArtwork from './Common/Artwork';
-import StationsCommonQuota from '~/components/Stations/Common/Quota';
+import StationsCommonQuota from '../../Stations/Common/Quota';
 
 export const episodeViewProps = {
   props: {

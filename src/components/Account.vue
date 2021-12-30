@@ -195,14 +195,14 @@
 </template>
 
 <script>
-import Icon from '~/components/Common/Icon';
-import DataTable from '~/components/Common/DataTable';
+import Icon from './Common/Icon';
+import DataTable from './Common/DataTable';
 import AccountChangePasswordModal from './Account/ChangePasswordModal';
 import AccountApiKeyModal from './Account/ApiKeyModal';
 import AccountTwoFactorModal from './Account/TwoFactorModal';
 import AccountEditModal from './Account/EditModal';
-import Avatar from '~/components/Common/Avatar';
-import InfoCard from '~/components/Common/InfoCard';
+import Avatar from './Common/Avatar';
+import InfoCard from './Common/InfoCard';
 
 export default {
   name: 'Account',

@@ -10,7 +10,7 @@
 
 <script>
 import SongHistory from './FullPlayer/SongHistory';
-import NowPlaying, { nowPlayingProps } from '~/components/Common/NowPlaying';
+import NowPlaying, { nowPlayingProps } from '../Common/NowPlaying';
 
 export default {
   mixins: [nowPlayingProps],

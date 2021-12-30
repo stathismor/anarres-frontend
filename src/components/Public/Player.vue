@@ -231,10 +231,10 @@
 </style>
 
 <script>
-import AudioPlayer from '~/components/Common/AudioPlayer';
-import NowPlaying, { nowPlayingProps } from '~/components/Common/NowPlaying';
-import Icon from '~/components/Common/Icon';
-import PlayButton from '~/components/Common/PlayButton';
+import AudioPlayer from '../Common/AudioPlayer';
+import NowPlaying, { nowPlayingProps } from '../Common/NowPlaying';
+import Icon from '../Common/Icon';
+import PlayButton from '../Common/PlayButton';
 
 export const radioPlayerProps = {
   ...nowPlayingProps,

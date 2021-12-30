@@ -87,10 +87,10 @@
 </template>
 
 <script>
-import DataTable from '~/components/Common/DataTable';
+import DataTable from '../../Common/DataTable';
 import EditModal from './PodcastEditModal';
-import AlbumArt from '~/components/Common/AlbumArt';
-import StationsCommonQuota from '~/components/Stations/Common/Quota';
+import AlbumArt from '../../Common/AlbumArt';
+import StationsCommonQuota from '../../Stations/Common/Quota';
 
 export const listViewProps = {
   props: {

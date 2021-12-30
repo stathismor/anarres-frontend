@@ -226,7 +226,7 @@
 </template>
 
 <script>
-import DataTable from '~/components/Common/DataTable';
+import DataTable from '../Common/DataTable';
 import MediaToolbar from './Media/MediaToolbar';
 import Breadcrumb from './Media/Breadcrumb';
 import FileUpload from './Media/FileUpload';
@@ -236,11 +236,11 @@ import RenameModal from './Media/RenameModal';
 import EditModal from './Media/EditModal';
 import formatFileSize from '~/functions/formatFileSize.js';
 import _ from 'lodash';
-import Icon from '~/components/Common/Icon';
-import AlbumArt from '~/components/Common/AlbumArt';
-import PlayButton from '~/components/Common/PlayButton';
+import Icon from '../Common/Icon';
+import AlbumArt from '../Common/AlbumArt';
+import PlayButton from '../Common/PlayButton';
 import { DateTime } from 'luxon';
-import StationsCommonQuota from '~/components/Stations/Common/Quota';
+import StationsCommonQuota from '../Stations/Common/Quota';
 
 export default {
   components: {

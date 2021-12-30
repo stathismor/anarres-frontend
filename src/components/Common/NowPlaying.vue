@@ -1,6 +1,6 @@
 <template></template>
 <script>
-import NowPlaying from '~/components/Entity/NowPlaying';
+import NowPlaying from '../Entity/NowPlaying';
 import NchanSubscriber from 'nchan';
 
 export const nowPlayingProps = {

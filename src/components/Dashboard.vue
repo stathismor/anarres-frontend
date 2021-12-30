@@ -243,13 +243,13 @@
 </template>
 
 <script>
-import TimeSeriesChart from '~/components/Common/TimeSeriesChart';
-import DataTable from '~/components/Common/DataTable';
+import TimeSeriesChart from './Common/TimeSeriesChart';
+import DataTable from './Common/DataTable';
 import store from 'store';
-import Icon from '~/components/Common/Icon';
-import Avatar from '~/components/Common/Avatar';
-import PlayButton from '~/components/Common/PlayButton';
-import AlbumArt from '~/components/Common/AlbumArt';
+import Icon from './Common/Icon';
+import Avatar from './Common/Avatar';
+import PlayButton from './Common/PlayButton';
+import AlbumArt from './Common/AlbumArt';
 
 export default {
   components: {
