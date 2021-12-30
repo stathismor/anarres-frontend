@@ -6,9 +6,9 @@ stream.init = function () {
   // Define the streaming radio context.
   if (!this.context) {
     if (typeof webkitAudioContext !== 'undefined') {
-      this.context = new webkitAudioContext;
+      this.context = new webkitAudioContext();
     } else {
-      this.context = new AudioContext;
+      this.context = new AudioContext();
     }
 
     this.webcast = this.context.createWebcastSource(4096, defaultChannels);
@@ -22,12 +22,8 @@ stream.resumeContext = function () {
   }
 };
 
-stream.createAudioSource = function ({
-                                       file,
-                                       audio
-                                     }, model, cb) {
-  var el,
-    source;
+stream.createAudioSource = function ({ file, audio }, model, cb) {
+  var el, source;
 
   el = new Audio(URL.createObjectURL(file));
   el.controls = false;
@@ -84,16 +80,20 @@ stream.createFileSource = function (file, model, cb) {
 };
 
 stream.createMicrophoneSource = function (constraints, cb) {
-  return navigator.mediaDevices.getUserMedia(constraints).then(function (bit_stream) {
-    var source;
+  return navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then(function (bit_stream) {
+      var source;
 
-    source = stream.context.createMediaStreamSource(bit_stream);
-    source.stop = function () {
-      var ref;
-      return (ref = bit_stream.getAudioTracks()) != null ? ref[0].stop() : void 0;
-    };
-    return cb(source);
-  });
+      source = stream.context.createMediaStreamSource(bit_stream);
+      source.stop = function () {
+        var ref;
+        return (ref = bit_stream.getAudioTracks()) != null
+          ? ref[0].stop()
+          : void 0;
+      };
+      return cb(source);
+    });
 };
 
 stream.close = function (cb) {

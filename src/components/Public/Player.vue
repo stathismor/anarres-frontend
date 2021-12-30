@@ -77,6 +77,7 @@
             <a
               class="dropdown-item"
               v-for="stream in streams"
+              v-bind:key="stream"
               href="javascript:"
               @click="switchStream(stream)"
             >

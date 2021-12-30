@@ -2,24 +2,24 @@ export default {
   inject: ['getStream', 'resumeStream'],
   data: function () {
     return {
-      'controlsNode': null,
+      controlsNode: null,
 
-      'trackGain': 0,
-      'trackGainObj': null,
+      trackGain: 0,
+      trackGainObj: null,
 
-      'destination': null,
-      'sink': null,
+      destination: null,
+      sink: null,
 
-      'passThrough': false,
-      'passThroughObj': null,
+      passThrough: false,
+      passThroughObj: null,
 
-      'source': null,
-      'playing': false,
-      'paused': false,
-      'position': 0.0,
-      'volume': 100,
-      'volumeLeft': 0,
-      'volumeRight': 0
+      source: null,
+      playing: false,
+      paused: false,
+      position: 0.0,
+      volume: 100,
+      volumeLeft: 0,
+      volumeRight: 0,
     };
   },
   mounted: function () {
@@ -28,18 +28,16 @@ export default {
   watch: {
     volume: function (val, oldVal) {
       this.setTrackGain(val);
-    }
+    },
   },
   methods: {
     createControlsNode: function () {
-      var bufferLength,
-        bufferLog,
-        bufferSize,
-        log10,
-        source;
+      var bufferLength, bufferLog, bufferSize, log10, source;
 
       bufferSize = 4096;
-      bufferLength = parseFloat(bufferSize) / parseFloat(this.getStream().context.sampleRate);
+      bufferLength =
+        parseFloat(bufferSize) /
+        parseFloat(this.getStream().context.sampleRate);
       bufferLog = Math.log(parseFloat(bufferSize));
       log10 = 2.0 * Math.log(10);
 
@@ -68,10 +66,18 @@ export default {
           }
         }
         results = [];
-        for (channel = j = 0, ref2 = buf.inputBuffer.numberOfChannels - 1; (0 <= ref2 ? j <= ref2 : j >= ref2); channel = 0 <= ref2 ? ++j : --j) {
+        for (
+          channel = j = 0, ref2 = buf.inputBuffer.numberOfChannels - 1;
+          0 <= ref2 ? j <= ref2 : j >= ref2;
+          channel = 0 <= ref2 ? ++j : --j
+        ) {
           channelData = buf.inputBuffer.getChannelData(channel);
           rms = 0.0;
-          for (i = k = 0, ref3 = channelData.length - 1; (0 <= ref3 ? k <= ref3 : k >= ref3); i = 0 <= ref3 ? ++k : --k) {
+          for (
+            i = k = 0, ref3 = channelData.length - 1;
+            0 <= ref3 ? k <= ref3 : k >= ref3;
+            i = 0 <= ref3 ? ++k : --k
+          ) {
             rms += Math.pow(channelData[i], 2);
           }
           volume = 100 * Math.exp((Math.log(rms) - bufferLog) / log10);
@@ -81,7 +87,9 @@ export default {
             this.volumeRight = volume;
           }
 
-          results.push(buf.outputBuffer.getChannelData(channel).set(channelData));
+          results.push(
+            buf.outputBuffer.getChannelData(channel).set(channelData)
+          );
         }
         return results;
       };
@@ -92,18 +100,24 @@ export default {
       var source;
       source = this.getStream().context.createScriptProcessor(256, 2, 2);
       source.onaudioprocess = (buf) => {
-        var channel,
-          channelData,
-          j,
-          ref1,
-          results;
+        var channel, channelData, j, ref1, results;
         channelData = buf.inputBuffer.getChannelData(channel);
         results = [];
-        for (channel = j = 0, ref1 = buf.inputBuffer.numberOfChannels - 1; (0 <= ref1 ? j <= ref1 : j >= ref1); channel = 0 <= ref1 ? ++j : --j) {
+        for (
+          channel = j = 0, ref1 = buf.inputBuffer.numberOfChannels - 1;
+          0 <= ref1 ? j <= ref1 : j >= ref1;
+          channel = 0 <= ref1 ? ++j : --j
+        ) {
           if (this.passThrough) {
-            results.push(buf.outputBuffer.getChannelData(channel).set(channelData));
+            results.push(
+              buf.outputBuffer.getChannelData(channel).set(channelData)
+            );
           } else {
-            results.push(buf.outputBuffer.getChannelData(channel).set(new Float32Array(channelData.length)));
+            results.push(
+              buf.outputBuffer
+                .getChannelData(channel)
+                .set(new Float32Array(channelData.length))
+            );
           }
         }
         return results;
@@ -112,16 +126,21 @@ export default {
     },
 
     setTrackGain: function (new_gain) {
-      return this.trackGainObj.gain.value = parseFloat(new_gain) / 100.0;
+      return (this.trackGainObj.gain.value = parseFloat(new_gain) / 100.0);
     },
 
     togglePause: function () {
-      var ref1,
-        ref2;
+      var ref1, ref2;
       if (((ref1 = this.source) != null ? ref1.pause : void 0) == null) {
         return;
       }
-      if ((ref2 = this.source) != null ? typeof ref2.paused === 'function' ? ref2.paused() : void 0 : void 0) {
+      if (
+        (ref2 = this.source) != null
+          ? typeof ref2.paused === 'function'
+            ? ref2.paused()
+            : void 0
+          : void 0
+      ) {
         this.source.play();
         this.playing = true;
         this.paused = false;
@@ -149,11 +168,7 @@ export default {
     },
 
     stop: function () {
-      var ref1,
-        ref2,
-        ref3,
-        ref4,
-        ref5;
+      var ref1, ref2, ref3, ref4, ref5;
       if ((ref1 = this.source) != null) {
         if (typeof ref1.stop === 'function') {
           ref1.stop();
@@ -182,9 +197,15 @@ export default {
     },
 
     seek: function (percent) {
-      var position,
-        ref1;
-      if (!(position = (ref1 = this.source) != null ? typeof ref1.seek === 'function' ? ref1.seek(percent) : void 0 : void 0)) {
+      var position, ref1;
+      if (
+        !(position =
+          (ref1 = this.source) != null
+            ? typeof ref1.seek === 'function'
+              ? ref1.seek(percent)
+              : void 0
+            : void 0)
+      ) {
         return;
       }
 
@@ -192,10 +213,7 @@ export default {
     },
 
     prettifyTime: function (time) {
-      var hours,
-        minutes,
-        result,
-        seconds;
+      var hours, minutes, result, seconds;
       hours = parseInt(time / 3600);
       time %= 3600;
       minutes = parseInt(time / 60);
@@ -215,6 +233,6 @@ export default {
 
     sendMetadata: function (file) {
       this.getStream().webcast.sendMetadata(file.metadata);
-    }
-  }
+    },
+  },
 };
