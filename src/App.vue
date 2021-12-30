@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <full-player />
+    <anarres-player />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -10,10 +10,10 @@
 </template>
 
 <script type="text/javascript">
-import FullPlayer from './components/FullPlayer.vue';
+import AnarresPlayer from './components/Public/AnarresPlayer.vue';
 export default {
   components: {
-    FullPlayer, // register component
+    AnarresPlayer, // register component
   },
 };
 </script>
