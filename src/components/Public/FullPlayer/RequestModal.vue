@@ -3,7 +3,7 @@
     size="lg"
     id="request_modal"
     ref="modal"
-    :title="langTitle"
+    title="Request a Song"
     hide-footer
   >
     <song-request
@@ -39,11 +39,6 @@ export default {
     return {
       loading: true,
     };
-  },
-  computed: {
-    langTitle() {
-      return this.$gettext('Request a Song');
-    },
   },
   methods: {
     doClose() {

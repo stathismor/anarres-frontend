@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <anarres-player />
     <div id="nav">
+      <anarres-player
+        stationName="Anarres Station"
+        requestListUri="/api/station/1/requests"
+        downloadPlaylistUri="/public/azuratest_radio/playlist.pls"
+        nowPlayingUri="https://demo.azuracast.com/api/nowplaying/1"
+        v-bind:showAlbumArt="true"
+        v-bind:useNchan="false"
+      />
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>

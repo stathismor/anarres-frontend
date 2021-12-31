@@ -19,7 +19,7 @@
             v-b-modal.song_history_modal
           >
             <icon icon="history"></icon>
-            {{ langSongHistory }}
+            Song history
           </a>
           <a
             class="btn btn-sm btn-outline-secondary"
@@ -27,14 +27,14 @@
             v-b-modal.request_modal
           >
             <icon icon="help_outline"></icon>
-            {{ langRequestSong }}
+            Request Song
           </a>
           <a
             class="btn btn-sm btn-outline-secondary"
             :href="downloadPlaylistUri"
           >
             <icon icon="file_download"></icon>
-            {{ langDownloadPlaylist }}
+            Playlist
           </a>
         </div>
       </div>
@@ -53,15 +53,60 @@
 </template>
 
 <script>
-import RadioPlayer, { radioPlayerProps } from './Player.vue';
+import RadioPlayer, { radioPlayerProps } from './Player';
 import SongHistoryModal from './FullPlayer/SongHistoryModal';
 import RequestModal from './FullPlayer/RequestModal';
 import Icon from '../Common/Icon';
+import '../../vendor/bootstrapVue';
+import axios from 'axios';
+import '../../base.js';
 
 export default {
   inheritAttrs: false,
   components: { Icon, RequestModal, SongHistoryModal, RadioPlayer },
   mixins: [radioPlayerProps],
+  created() {
+    let handleAxiosError = (error) => {
+      let notifyMessage = this.$gettext(
+        'An error occurred and your request could not be completed.'
+      );
+      if (error.response) {
+        // Request made and server responded
+        notifyMessage = error.response.data.message;
+        console.error(notifyMessage);
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.error('Error', error.message);
+      }
+
+      if (typeof this.$notifyError === 'function') {
+        this.$notifyError(notifyMessage);
+      }
+    };
+
+    axios.interceptors.request.use(
+      (config) => {
+        return config;
+      },
+      (error) => {
+        handleAxiosError(error);
+        return Promise.reject(error);
+      }
+    );
+
+    axios.interceptors.response.use(
+      (response) => {
+        return response;
+      },
+      (error) => {
+        handleAxiosError(error);
+        return Promise.reject(error);
+      }
+    );
+  },
   props: {
     stationName: {
       type: String,
@@ -84,16 +129,9 @@ export default {
       required: false,
       default: () => [],
     },
-  },
-  computed: {
-    langSongHistory() {
-      return this.$gettext('Song History');
-    },
-    langRequestSong() {
-      return this.$gettext('Request Song');
-    },
-    langDownloadPlaylist() {
-      return this.$gettext('Playlist');
+    useNchan: {
+      type: Boolean,
+      default: true,
     },
   },
   methods: {

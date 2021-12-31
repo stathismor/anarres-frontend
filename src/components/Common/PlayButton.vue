@@ -39,7 +39,7 @@ export default {
       return playingUrl === thisUrl;
     },
     langTitle() {
-      return this.isThisPlaying ? this.$gettext('Stop') : this.$gettext('Play');
+      return this.isThisPlaying ? 'Stop' : 'Play';
     },
     icon() {
       return this.isThisPlaying ? 'stop_circle' : 'play_circle';

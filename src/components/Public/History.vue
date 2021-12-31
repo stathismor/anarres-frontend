@@ -1,6 +1,10 @@
 <template>
   <div id="song_history">
-    <now-playing v-bind="$props" @np_updated="setNowPlaying"></now-playing>
+    <now-playing
+      nowPlayingUri="https://demo.azuracast.com/api/nowplaying"
+      v-bind="$props"
+      @np_updated="setNowPlaying"
+    ></now-playing>
     <song-history
       :show-album-art="showAlbumArt"
       :history="history"

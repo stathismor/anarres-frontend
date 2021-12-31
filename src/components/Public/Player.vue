@@ -5,14 +5,13 @@
       ref="player"
       v-bind:title="np.now_playing.song.text"
     ></audio-player>
-
     <div class="now-playing-details">
       <div
         class="now-playing-art"
         v-if="showAlbumArt && np.now_playing.song.art"
       >
         <a v-bind:href="np.now_playing.song.art" data-fancybox target="_blank">
-          <img v-bind:src="np.now_playing.song.art" :alt="lang_album_art_alt" />
+          <img v-bind:src="np.now_playing.song.art" alt="Album Art" />
         </a>
       </div>
       <div class="now-playing-main">
@@ -77,7 +76,7 @@
             <a
               class="dropdown-item"
               v-for="stream in streams"
-              v-bind:key="stream"
+              v-bind:key="stream.name"
               href="javascript:"
               @click="switchStream(stream)"
             >
@@ -91,7 +90,7 @@
         <a
           href="#"
           class="text-secondary"
-          :title="lang_mute_btn"
+          title="Mute"
           @click.prevent="volume = 0"
         >
           <icon icon="volume_mute"></icon>
@@ -100,7 +99,7 @@
       <div class="radio-control-volume-slider">
         <input
           type="range"
-          :title="lang_volume_slider"
+          title="Volume"
           class="custom-range"
           min="0"
           max="100"
@@ -112,7 +111,7 @@
         <a
           href="#"
           class="text-secondary"
-          :title="lang_full_volume_btn"
+          title="Full Volume"
           @click.prevent="volume = 100"
         >
           <icon icon="volume_up"></icon>
@@ -233,7 +232,10 @@
 <script>
 import AudioPlayer from '../Common/AudioPlayer';
 import NowPlaying, { nowPlayingProps } from '../Common/NowPlaying';
+import InitialNowPlaying from '../Entity/NowPlaying';
 import Icon from '../Common/Icon';
+import '../../base.js';
+import axios from 'axios';
 import PlayButton from '../Common/PlayButton';
 
 export const radioPlayerProps = {
@@ -246,7 +248,7 @@ export const radioPlayerProps = {
     initialNowPlaying: {
       type: Object,
       default() {
-        return NowPlaying;
+        return InitialNowPlaying;
       },
     },
     useNchan: {
@@ -265,7 +267,7 @@ export const radioPlayerProps = {
 };
 
 export default {
-  components: { PlayButton, Icon, NowPlaying, AudioPlayer },
+  components: { NowPlaying, Icon, PlayButton, AudioPlayer },
   mixins: [radioPlayerProps],
   data() {
     return {
@@ -287,25 +289,49 @@ export default {
       this.switchStream(this.current_stream);
     }
   },
+  created() {
+    let handleAxiosError = (error) => {
+      let notifyMessage = this.$gettext(
+        'An error occurred and your request could not be completed.'
+      );
+      if (error.response) {
+        // Request made and server responded
+        notifyMessage = error.response.data.message;
+        console.error(notifyMessage);
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.error('Error', error.message);
+      }
+
+      if (typeof this.$notifyError === 'function') {
+        this.$notifyError(notifyMessage);
+      }
+    };
+
+    axios.interceptors.request.use(
+      (config) => {
+        return config;
+      },
+      (error) => {
+        handleAxiosError(error);
+        return Promise.reject(error);
+      }
+    );
+
+    axios.interceptors.response.use(
+      (response) => {
+        return response;
+      },
+      (error) => {
+        handleAxiosError(error);
+        return Promise.reject(error);
+      }
+    );
+  },
   computed: {
-    lang_play_btn() {
-      return this.$gettext('Play');
-    },
-    lang_stop_btn() {
-      return this.$gettext('Stop');
-    },
-    lang_mute_btn() {
-      return this.$gettext('Mute');
-    },
-    lang_volume_slider() {
-      return this.$gettext('Volume');
-    },
-    lang_full_volume_btn() {
-      return this.$gettext('Full Volume');
-    },
-    lang_album_art_alt() {
-      return this.$gettext('Album Art');
-    },
     streams() {
       let all_streams = [];
       this.np.station.mounts.forEach(function (mount) {

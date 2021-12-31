@@ -9,6 +9,7 @@
             <radio-player
               v-bind="$props"
               @np_updated="onNowPlayingUpdate"
+              nowPlayingUri="https://demo.azuracast.com/api/nowplaying"
             ></radio-player>
           </div>
         </div>
@@ -53,7 +54,7 @@
 </template>
 
 <script>
-import RadioPlayer, { radioPlayerProps } from './Player.vue';
+import RadioPlayer, { radioPlayerProps } from './Player';
 import SongHistoryModal from './FullPlayer/SongHistoryModal';
 import RequestModal from './FullPlayer/RequestModal';
 import Icon from '../Common/Icon';

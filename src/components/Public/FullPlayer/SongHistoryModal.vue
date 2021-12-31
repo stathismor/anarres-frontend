@@ -3,7 +3,7 @@
     size="md"
     id="song_history_modal"
     ref="modal"
-    :title="langTitle"
+    title="Song History"
     centered
     hide-footer
   >
@@ -29,11 +29,6 @@ export default {
     return {
       history: [],
     };
-  },
-  computed: {
-    langTitle() {
-      return this.$gettext('Song History');
-    },
   },
   methods: {
     updateHistory(np) {

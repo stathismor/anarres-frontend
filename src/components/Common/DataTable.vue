@@ -33,7 +33,6 @@
                 title="Refresh"
                 @click="onClickRefresh"
                 v-b-tooltip.hover
-                :title="langRefreshTooltip"
               >
                 <icon icon="refresh"></icon>
               </b-button>
@@ -46,7 +45,7 @@
               >
                 <b-dropdown-item
                   v-for="pageOption in pageOptions"
-                  :key="pageOption"
+                  v-bind:key="pageOption"
                   :active="pageOption === perPage"
                   @click="setPerPage(pageOption)"
                 >
@@ -64,7 +63,11 @@
                   <span class="caret"></span>
                 </template>
                 <b-dropdown-form class="pt-3">
-                  <div v-for="field in selectableFields" class="form-group">
+                  <div
+                    v-for="field in selectableFields"
+                    v-bind:key="field"
+                    class="form-group"
+                  >
                     <div class="custom-control custom-checkbox">
                       <input
                         type="checkbox"
@@ -115,7 +118,7 @@
         @filtered="onFiltered"
         @refreshed="onRefreshed"
       >
-        <template #head(selected)="data">
+        <template>
           <b-form-checkbox
             :aria-label="langSelectAll"
             :checked="allSelected"
@@ -363,7 +366,7 @@ export default {
     },
     itemProvider() {
       if (this.items !== null) {
-        this.totalRows = this.items.length;
+        this.updateTotalRows(this.items.length);
         return this.items;
       }
 
@@ -497,6 +500,9 @@ export default {
     },
     onFiltered(filter) {
       this.$emit('filtered', filter);
+    },
+    updateTotalRows(length) {
+      this.totalRows = length;
     },
   },
 };
