@@ -6,6 +6,12 @@
       v-bind:title="np.now_playing.song.text"
     ></audio-player>
     <div class="now-playing-details">
+      <play-button
+        class="radio-control-play-button"
+        icon-class="outlined lg"
+        :url="current_stream.url"
+        is-stream
+      ></play-button>
       <div
         class="now-playing-art"
         v-if="showAlbumArt && np.now_playing.song.art"
@@ -53,39 +59,6 @@
     <hr />
 
     <div class="radio-controls">
-      <play-button
-        class="radio-control-play-button"
-        icon-class="outlined lg"
-        :url="current_stream.url"
-        is-stream
-      ></play-button>
-
-      <div class="radio-control-select-stream">
-        <div v-if="this.streams.length > 1" class="dropdown">
-          <button
-            class="btn btn-sm btn-outline-primary dropdown-toggle"
-            type="button"
-            id="btn-select-stream"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {{ current_stream.name }}
-          </button>
-          <div class="dropdown-menu" aria-labelledby="btn-select-stream">
-            <a
-              class="dropdown-item"
-              v-for="stream in streams"
-              v-bind:key="stream.name"
-              href="javascript:"
-              @click="switchStream(stream)"
-            >
-              {{ stream.name }}
-            </a>
-          </div>
-        </div>
-      </div>
-
       <div class="radio-control-mute-button">
         <a
           href="#"

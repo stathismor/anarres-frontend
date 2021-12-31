@@ -27,13 +27,6 @@
             <icon icon="help_outline"></icon>
             Request Song
           </a>
-          <a
-            class="btn btn-sm btn-outline-secondary"
-            :href="downloadPlaylistUri"
-          >
-            <icon icon="file_download"></icon>
-            Playlist
-          </a>
         </div>
       </div>
     </div>
