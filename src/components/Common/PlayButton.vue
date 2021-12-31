@@ -4,6 +4,12 @@
   </a>
 </template>
 
+<style scoped>
+a {
+  font-size: 36px;
+}
+</style>
+
 <script>
 import Icon from './Icon';
 
@@ -42,7 +48,7 @@ export default {
       return this.isThisPlaying ? 'Stop' : 'Play';
     },
     icon() {
-      return this.isThisPlaying ? 'stop_circle' : 'play_circle';
+      return this.isThisPlaying ? 'pause' : 'play_arrow';
     },
   },
   methods: {
