@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="public-page">
-      <div class="card">
+      <div class="player">
         <div class="card-body">
-          <h2 class="card-title">{{ stationName }}</h2>
-
           <div class="stations nowplaying">
             <radio-player
               v-bind="$props"
@@ -51,6 +49,23 @@
     ></request-modal>
   </div>
 </template>
+
+<style>
+.player {
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.14), 0 3px 4px 0 rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  word-wrap: break-word;
+  position: fixed;
+  bottom: 0;
+  z-index: 50000;
+  width: 100%;
+}
+</style>
 
 <script>
 import RadioPlayer, { radioPlayerProps } from './Player';
@@ -108,10 +123,6 @@ export default {
     );
   },
   props: {
-    stationName: {
-      type: String,
-      required: true,
-    },
     enableRequests: {
       type: Boolean,
       default: false,

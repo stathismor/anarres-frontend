@@ -2,7 +2,6 @@
   <div id="app">
     <div id="nav">
       <anarres-player
-        stationName="Anarres Station"
         requestListUri="/api/station/1/requests"
         downloadPlaylistUri="/public/azuratest_radio/playlist.pls"
         nowPlayingUri="https://demo.azuracast.com/api/nowplaying/1"
@@ -32,10 +31,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
 }
 
 #nav a {

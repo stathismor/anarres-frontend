@@ -38,7 +38,7 @@ export default {
     // Convert initial NP data from prop to data.
     this.setNowPlaying(this.initialNowPlaying);
 
-    setTimeout(this.checkNowPlaying, 5000);
+    this.checkNowPlaying();
   },
   created() {
     let handleAxiosError = (error) => {
