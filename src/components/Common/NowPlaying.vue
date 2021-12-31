@@ -38,7 +38,7 @@ export default {
     // Convert initial NP data from prop to data.
     this.setNowPlaying(this.initialNowPlaying);
 
-    setTimeout(this.checkNowPlaying, 3000);
+    setTimeout(this.checkNowPlaying, 5000);
   },
   created() {
     let handleAxiosError = (error) => {
@@ -90,7 +90,7 @@ export default {
           let np_new = JSON.parse(message);
           setTimeout(() => {
             this.setNowPlaying(np_new);
-          }, 1000);
+          }, 5000);
         });
         this.nchan_subscriber.start();
       } else {
@@ -99,7 +99,7 @@ export default {
           .then((response) => {
             this.setNowPlaying(response.data);
 
-            setTimeout(this.checkNowPlaying, !document.hidden ? 5000 : 3000);
+            setTimeout(this.checkNowPlaying, !document.hidden ? 15000 : 30000);
           })
           .catch((error) => {
             setTimeout(this.checkNowPlaying, !document.hidden ? 30000 : 120000);
