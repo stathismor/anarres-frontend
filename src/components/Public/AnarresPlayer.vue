@@ -4,21 +4,11 @@
       <div class="player">
         <div class="card-body">
           <div class="stations nowplaying">
-            <radio-player
-              v-bind="$props"
-              @np_updated="onNowPlayingUpdate"
-            ></radio-player>
+            <radio-player v-bind="$props"></radio-player>
           </div>
         </div>
 
         <div class="card-actions">
-          <a
-            class="btn btn-sm btn-outline-secondary"
-            v-b-modal.song_history_modal
-          >
-            <icon icon="history"></icon>
-            Song history
-          </a>
           <a
             class="btn btn-sm btn-outline-secondary"
             v-if="enableRequests"
@@ -31,10 +21,6 @@
       </div>
     </div>
 
-    <song-history-modal
-      :show-album-art="showAlbumArt"
-      ref="history_modal"
-    ></song-history-modal>
     <request-modal
       :show-album-art="showAlbumArt"
       :request-list-uri="requestListUri"
@@ -55,23 +41,20 @@
   word-wrap: break-word;
   position: fixed;
   bottom: 0;
-  z-index: 50000;
   width: 100%;
 }
 </style>
 
 <script>
 import RadioPlayer, { radioPlayerProps } from './Player';
-import SongHistoryModal from './FullPlayer/SongHistoryModal';
 import RequestModal from './FullPlayer/RequestModal';
-import Icon from '../Common/Icon';
 import '../../vendor/bootstrapVue';
 import axios from 'axios';
 import '../../base.js';
 
 export default {
   inheritAttrs: false,
-  components: { Icon, RequestModal, SongHistoryModal, RadioPlayer },
+  components: { RequestModal, RadioPlayer },
   mixins: [radioPlayerProps],
   created() {
     let handleAxiosError = (error) => {
@@ -136,11 +119,6 @@ export default {
     useNchan: {
       type: Boolean,
       default: true,
-    },
-  },
-  methods: {
-    onNowPlayingUpdate(newNowPlaying) {
-      this.$refs.history_modal.updateHistory(newNowPlaying);
     },
   },
 };

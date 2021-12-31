@@ -1,6 +1,6 @@
 <template>
   <div id="station-history">
-    <p v-if="history.length <= 0">{{ langNoRecords }}</p>
+    <p v-if="history.length <= 0">No records to display.</p>
     <div class="song" v-for="(row, index) in history" v-bind:key="index">
       <strong class="order">{{ history.length - index }}</strong>
       <img v-if="showAlbumArt" class="art" :src="row.song.art" />
@@ -79,11 +79,6 @@ export default {
     showAlbumArt: {
       type: Boolean,
       default: true,
-    },
-  },
-  computed: {
-    langNoRecords() {
-      return this.$gettext('No records to display.');
     },
   },
   methods: {

@@ -90,7 +90,20 @@
           <icon icon="volume_up"></icon>
         </a>
       </div>
+      <div>
+        <a
+          class="btn btn-sm btn-outline-secondary"
+          v-b-modal.song_history_modal
+        >
+          <icon icon="history"></icon>
+          Song history
+        </a>
+      </div>
     </div>
+    <song-history-modal
+      :show-album-art="showAlbumArt"
+      ref="history_modal"
+    ></song-history-modal>
   </div>
 </template>
 
@@ -207,6 +220,7 @@ import AudioPlayer from '../Common/AudioPlayer';
 import NowPlaying, { nowPlayingProps } from '../Common/NowPlaying';
 import InitialNowPlaying from '../Entity/NowPlaying';
 import Icon from '../Common/Icon';
+import SongHistoryModal from './FullPlayer/SongHistoryModal';
 import '../../base.js';
 import axios from 'axios';
 import PlayButton from '../Common/PlayButton';
@@ -240,7 +254,7 @@ export const radioPlayerProps = {
 };
 
 export default {
-  components: { NowPlaying, Icon, PlayButton, AudioPlayer },
+  components: { NowPlaying, SongHistoryModal, Icon, PlayButton, AudioPlayer },
   mixins: [radioPlayerProps],
   data() {
     return {
@@ -373,6 +387,7 @@ export default {
     setNowPlaying(np_new) {
       this.np = np_new;
       this.$emit('np_updated', np_new);
+      this.$refs.history_modal.updateHistory(np_new);
 
       // Set a "default" current stream if none exists.
       if (this.current_stream.url === '' && this.streams.length > 0) {
