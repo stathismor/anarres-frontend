@@ -56,8 +56,6 @@
       </div>
     </div>
 
-    <hr />
-
     <div class="radio-controls">
       <div class="radio-control-mute-button">
         <a
@@ -96,7 +94,6 @@
           v-b-modal.song_history_modal
         >
           <icon icon="history"></icon>
-          Song history
         </a>
       </div>
     </div>
@@ -108,9 +105,14 @@
 </template>
 
 <style lang="css">
+.radio-player-widget {
+  display: flex;
+}
+
 .radio-player-widget .now-playing-details {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .radio-player-widget .now-playing-details .now-playing-art {
   padding-right: 0.5rem;
@@ -195,6 +197,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: auto;
+  justify-content: flex-end;
+  padding-top: 2.5rem;
 }
 .radio-player-widget .radio-controls .radio-control-play-button {
   margin-right: 0.25rem;
@@ -208,7 +213,7 @@
 }
 .radio-player-widget .radio-controls .radio-control-volume-slider {
   flex: 1 1 auto;
-  max-width: 30%;
+  max-width: 50%;
 }
 .radio-player-widget .radio-controls .radio-control-volume-slider input {
   height: 10px;

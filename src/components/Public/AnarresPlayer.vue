@@ -2,7 +2,7 @@
   <div>
     <div class="public-page">
       <div class="player">
-        <div class="card-body">
+        <div class="player-body">
           <div class="stations nowplaying">
             <radio-player v-bind="$props"></radio-player>
           </div>
@@ -42,6 +42,10 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+.player-body {
+  flex: 1 1 auto;
+  padding: 0.5rem 0.5rem;
 }
 </style>
 
