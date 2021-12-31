@@ -6,6 +6,7 @@
 
 <style scoped>
 a {
+  color: #ee6c4d;
   font-size: 36px;
 }
 </style>

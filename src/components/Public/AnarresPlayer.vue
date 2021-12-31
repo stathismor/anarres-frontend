@@ -1,31 +1,12 @@
 <template>
   <div>
-    <div class="public-page">
-      <div class="player">
-        <div class="player-body">
-          <div class="stations nowplaying">
-            <radio-player v-bind="$props"></radio-player>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <a
-            class="btn btn-sm btn-outline-secondary"
-            v-if="enableRequests"
-            v-b-modal.request_modal
-          >
-            <icon icon="help_outline"></icon>
-            Request Song
-          </a>
+    <div class="player">
+      <div class="player-body">
+        <div class="stations nowplaying">
+          <radio-player v-bind="$props"></radio-player>
         </div>
       </div>
     </div>
-
-    <request-modal
-      :show-album-art="showAlbumArt"
-      :request-list-uri="requestListUri"
-      :custom-fields="customFields"
-    ></request-modal>
   </div>
 </template>
 
@@ -42,6 +23,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #3d5a80;
 }
 .player-body {
   flex: 1 1 auto;
@@ -51,14 +33,13 @@
 
 <script>
 import RadioPlayer, { radioPlayerProps } from './Player';
-import RequestModal from './FullPlayer/RequestModal';
 import '../../vendor/bootstrapVue';
 import axios from 'axios';
 import '../../base.js';
 
 export default {
   inheritAttrs: false,
-  components: { RequestModal, RadioPlayer },
+  components: { RadioPlayer },
   mixins: [radioPlayerProps],
   created() {
     let handleAxiosError = (error) => {
