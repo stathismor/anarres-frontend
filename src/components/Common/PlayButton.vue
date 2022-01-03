@@ -6,7 +6,7 @@
 
 <style scoped>
 a {
-  color: #ee6c4d;
+  color: var(--secondary-color);
   font-size: 36px;
 }
 </style>

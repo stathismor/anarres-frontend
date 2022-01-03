@@ -25,8 +25,16 @@ export default {
 </script>
 
 <style>
+@import '../assets/css/variables.css';
 body {
-  background: #293241;
+  background: #edecec url(../assets/img/background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 50% 58%;
+
+  /* background: var(--primary-color); */
   font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';

@@ -23,7 +23,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #3d5a80;
+  background-color: var(--primary-color);
 }
 .player-body {
   flex: 1 1 auto;
