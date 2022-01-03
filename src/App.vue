@@ -3,8 +3,8 @@
     <div id="nav">
       <anarres-player
         requestListUri="/api/station/1/requests"
-        downloadPlaylistUri="/public/azuratest_radio/playlist.pls"
-        nowPlayingUri="https://demo.azuracast.com/api/nowplaying/1"
+        downloadPlaylistUri="/public/anarres/playlist.pls"
+        nowPlayingUri="https://admin.anarres.fm/api/nowplaying/1"
         v-bind:showAlbumArt="true"
         v-bind:useNchan="false"
       />
