@@ -59,39 +59,8 @@
         </div>
       </div>
     </div>
-
     <div class="radio-controls">
-      <div class="radio-control-mute-button">
-        <a
-          href="#"
-          class="text-secondary1"
-          title="Mute"
-          @click.prevent="volume = 0"
-        >
-          <icon icon="volume_mute"></icon>
-        </a>
-      </div>
-      <div class="radio-control-volume-slider">
-        <input
-          type="range"
-          title="Volume"
-          class="custom-range"
-          min="0"
-          max="100"
-          step="1"
-          v-model="volume"
-        />
-      </div>
-      <div class="radio-control-max-volume-button">
-        <a
-          href="#"
-          class="text-secondary1"
-          title="Full Volume"
-          @click.prevent="volume = 100"
-        >
-          <icon icon="volume_up"></icon>
-        </a>
-      </div>
+      <volume-controls :get-volume="getVolume" @set_volume="setVolume" />
       <div>
         <a
           class="btn btn-sm btn-outline-secondary"
@@ -111,312 +80,6 @@
 <style lang="css">
 .text-secondary1 {
   color: #e0fbfc;
-}
-
-.custom-range {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  color: #e0fbfc;
-  background-color: transparent;
-  padding-left: 0;
-  width: 100%;
-}
-
-.custom-range:focus {
-  outline: 0;
-}
-
-.custom-range::-moz-focus-outer {
-  border: 0;
-}
-
-.custom-range::-moz-range-thumb {
-  transition-duration: 0.3s;
-  transition-property: box-shadow, height, width;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0;
-  border-radius: 50%;
-  height: 0.75rem;
-  width: 0.75rem;
-}
-
-@media (min-width: 576px) {
-  .custom-range::-moz-range-thumb {
-    transition-duration: 0.39s;
-  }
-}
-
-@media (min-width: 992px) {
-  .custom-range::-moz-range-thumb {
-    transition-duration: 0.2s;
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .custom-range::-moz-range-thumb {
-    transition: none;
-  }
-}
-
-.custom-range::-moz-range-thumb:active {
-  box-shadow: none;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.custom-range::-moz-range-thumb:focus {
-  outline: 0;
-}
-
-.custom-range::-moz-range-track {
-  transition-duration: 0.3s;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  border-color: transparent;
-  border-radius: 0;
-  color: transparent;
-  cursor: pointer;
-  height: 0.125rem;
-  width: 100%;
-}
-
-@media (min-width: 576px) {
-  .custom-range::-moz-range-track {
-    transition-duration: 0.39s;
-  }
-}
-
-@media (min-width: 992px) {
-  .custom-range::-moz-range-track {
-    transition-duration: 0.2s;
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .custom-range::-moz-range-track {
-    transition: none;
-  }
-}
-
-.custom-range::-ms-fill-lower {
-  height: 0.125rem;
-  margin-bottom: 0.125rem;
-  margin-left: 0.375rem;
-}
-
-.custom-range::-ms-fill-upper {
-  height: 0.125rem;
-  margin-right: 0.375rem;
-  margin-bottom: 0.125rem;
-}
-
-.custom-range::-ms-thumb {
-  transition-duration: 0.3s;
-  transition-property: box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0;
-  border-radius: 50%;
-  height: 0.75rem;
-  margin-right: 0.375rem;
-  margin-left: 0.375rem;
-  width: 0.75rem;
-}
-
-@media (min-width: 576px) {
-  .custom-range::-ms-thumb {
-    transition-duration: 0.39s;
-  }
-}
-
-@media (min-width: 992px) {
-  .custom-range::-ms-thumb {
-    transition-duration: 0.2s;
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .custom-range::-ms-thumb {
-    transition: none;
-  }
-}
-
-.custom-range::-ms-thumb:focus {
-  outline: 0;
-}
-
-.custom-range::-ms-track {
-  transition-duration: 0.3s;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: transparent;
-  border-color: transparent;
-  border-width: 0.875rem 0;
-  color: transparent;
-  cursor: pointer;
-  height: 0.125rem;
-  width: 100%;
-}
-
-@media (min-width: 576px) {
-  .custom-range::-ms-track {
-    transition-duration: 0.39s;
-  }
-}
-
-@media (min-width: 992px) {
-  .custom-range::-ms-track {
-    transition-duration: 0.2s;
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .custom-range::-ms-track {
-    transition: none;
-  }
-}
-
-.custom-range::-webkit-slider-runnable-track {
-  transition-duration: 0.3s;
-  transition-property: background-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  border-color: transparent;
-  border-radius: 0;
-  color: transparent;
-  cursor: pointer;
-  height: 0.125rem;
-  width: 100%;
-}
-
-@media (min-width: 576px) {
-  .custom-range::-webkit-slider-runnable-track {
-    transition-duration: 0.39s;
-  }
-}
-
-@media (min-width: 992px) {
-  .custom-range::-webkit-slider-runnable-track {
-    transition-duration: 0.2s;
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .custom-range::-webkit-slider-runnable-track {
-    transition: none;
-  }
-}
-
-.custom-range::-webkit-slider-thumb {
-  transition-duration: 0.3s;
-  transition-property: box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0;
-  border-radius: 50%;
-  height: 0.75rem;
-  margin-top: -0.3125rem;
-  width: 0.75rem;
-}
-
-@media (min-width: 576px) {
-  .custom-range::-webkit-slider-thumb {
-    transition-duration: 0.39s;
-  }
-}
-
-@media (min-width: 992px) {
-  .custom-range::-webkit-slider-thumb {
-    transition-duration: 0.2s;
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .custom-range::-webkit-slider-thumb {
-    transition: none;
-  }
-}
-
-.custom-range::-webkit-slider-thumb:active {
-  box-shadow: 0 0 0 0.375rem #757575;
-}
-
-.custom-range::-webkit-slider-thumb:focus {
-  outline: 0;
-}
-
-.custom-range:active::-moz-range-track,
-.custom-range:focus::-moz-range-track {
-  background-color: rgba(0, 0, 0, 0.38);
-}
-
-.custom-range:active::-ms-fill-upper,
-.custom-range:focus::-ms-fill-upper {
-  background-color: rgba(0, 0, 0, 0.38);
-}
-
-.custom-range:active::-webkit-slider-runnable-track,
-.custom-range:focus::-webkit-slider-runnable-track {
-  background-color: rgba(0, 0, 0, 0.38);
-}
-
-.custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 0.75rem rgba(117, 117, 117, 0.12);
-}
-
-.custom-range:focus::-ms-range-thumb {
-  box-shadow: 0 0 0 0.75rem rgba(117, 117, 117, 0.12);
-}
-
-.custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.75rem rgba(117, 117, 117, 0.12);
-}
-
-.custom-range::-moz-range-progress {
-  background-color: #e0fbfc;
-}
-
-.custom-range::-moz-range-thumb {
-  background-color: #e0fbfc;
-}
-
-.custom-range::-moz-range-track {
-  background-color: #293241;
-}
-
-.custom-range::-ms-fill-lower {
-  background-color: #757575;
-}
-
-.custom-range::-ms-fill-upper {
-  background-color: rgba(0, 0, 0, 0.26);
-}
-
-.custom-range::-ms-thumb {
-  background-color: #757575;
-}
-
-.custom-range::-ms-thumb:active {
-  box-shadow: 0 0 0 0.375rem #757575;
-}
-
-.custom-range::-webkit-slider-runnable-track {
-  background-color: rgba(0, 0, 0, 0.26);
-}
-
-.custom-range::-webkit-slider-thumb {
-  background-color: #757575;
-}
-
-.custom-range::-webkit-slider-thumb:active {
-  box-shadow: 0 0 0 0.375rem #757575;
 }
 
 .progress-bar {
@@ -520,6 +183,11 @@
 .radio-player-widget i.material-icons {
   line-height: 1;
 }
+.radio-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .radio-player-widget .radio-controls {
   display: flex;
   flex-direction: row;
@@ -534,17 +202,6 @@
 .radio-player-widget .radio-controls .radio-control-select-stream {
   flex: 1 1 auto;
 }
-.radio-player-widget .radio-controls .radio-control-mute-button,
-.radio-player-widget .radio-controls .radio-control-max-volume-button {
-  flex-shrink: 0;
-}
-.radio-player-widget .radio-controls .radio-control-volume-slider {
-  flex: 1 1 auto;
-  max-width: 50%;
-}
-.radio-player-widget .radio-controls .radio-control-volume-slider input {
-  height: 10px;
-}
 </style>
 
 <script>
@@ -556,6 +213,7 @@ import SongHistoryModal from './FullPlayer/SongHistoryModal';
 import '../../base.js';
 import axios from 'axios';
 import PlayButton from '../Common/PlayButton';
+import VolumeControls from '../Common/VolumeControls.vue';
 
 export const radioPlayerProps = {
   ...nowPlayingProps,
@@ -586,7 +244,14 @@ export const radioPlayerProps = {
 };
 
 export default {
-  components: { NowPlaying, SongHistoryModal, Icon, PlayButton, AudioPlayer },
+  components: {
+    NowPlaying,
+    SongHistoryModal,
+    Icon,
+    PlayButton,
+    AudioPlayer,
+    VolumeControls,
+  },
   mixins: [radioPlayerProps],
   data() {
     return {
@@ -598,21 +263,17 @@ export default {
         url: '',
       },
       clock_interval: null,
+      player: this.$refs.player,
     };
   },
   mounted() {
     this.is_mounted = true;
     this.clock_interval = setInterval(this.iterateTimer, 1000);
-
-    if (this.autoplay) {
-      this.switchStream(this.current_stream);
-    }
   },
   created() {
     let handleAxiosError = (error) => {
-      let notifyMessage = this.$gettext(
-        'An error occurred and your request could not be completed.'
-      );
+      let notifyMessage =
+        'An error occurred and your request could not be completed.';
       if (error.response) {
         // Request made and server responded
         notifyMessage = error.response.data.message;
@@ -698,23 +359,13 @@ export default {
       let time_total = this.np.now_playing.duration;
       return time_total ? this.formatTime(time_total) : null;
     },
-    volume: {
-      get() {
-        if (!this.is_mounted) {
-          return;
-        }
-
-        return this.$refs.player.getVolume();
-      },
-      set(vol) {
-        this.$refs.player.setVolume(vol);
-      },
-    },
   },
   methods: {
-    switchStream(new_stream) {
-      this.current_stream = new_stream;
-      this.$refs.player.toggle(this.current_stream.url, true);
+    setVolume(volume) {
+      this.$refs.player.setVolume(volume);
+    },
+    getVolume() {
+      return this.$refs.player.getVolume();
     },
     setNowPlaying(np_new) {
       this.np = np_new;
