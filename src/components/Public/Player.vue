@@ -29,10 +29,10 @@
         </h6>
 
         <div v-if="np.now_playing.song.title !== ''">
-          <h4 class="now-playing-title text-secondary1">
+          <h4 class="now-playing-title foreground-color">
             {{ np.now_playing.song.title }}
           </h4>
-          <h5 class="now-playing-artist text-secondary1">
+          <h5 class="now-playing-artist foreground-color">
             {{ np.now_playing.song.artist }}
           </h5>
         </div>
@@ -41,19 +41,19 @@
         </div>
 
         <div class="time-display" v-if="time_display_played">
-          <div class="time-display-played text-secondary1">
+          <div class="time-display-played foreground-color">
             {{ time_display_played }}
           </div>
           <div class="time-display-progress">
             <div class="progress">
               <div
-                class="progress-bar bg-secondary1"
+                class="progress-bar"
                 role="progressbar"
                 v-bind:style="{ width: time_percent + '%' }"
               ></div>
             </div>
           </div>
-          <div class="time-display-total text-secondary1">
+          <div class="time-display-total foreground-color">
             {{ time_display_total }}
           </div>
         </div>
@@ -66,7 +66,7 @@
           class="btn btn-sm btn-outline-secondary"
           v-b-modal.song_history_modal
         >
-          <icon class="text-secondary1" icon="history"></icon>
+          <icon class="foreground-color" icon="history"></icon>
         </a>
       </div>
     </div>
@@ -78,8 +78,8 @@
 </template>
 
 <style lang="css">
-.text-secondary1 {
-  color: #e0fbfc;
+.foreground-color {
+  color: var(--foreground-color);
 }
 
 .progress-bar {
@@ -89,12 +89,8 @@
   overflow: hidden;
   text-align: center;
   white-space: nowrap;
+  background-color: var(--background-color);
 }
-
-.bg-secondary1 {
-  background-color: #293241;
-}
-
 .radio-player-widget {
   display: flex;
 }

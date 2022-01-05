@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="player">
-      <div class="player-body">
-        <div class="stations nowplaying">
-          <radio-player v-bind="$props"></radio-player>
-        </div>
+      <div class="stations nowplaying">
+        <radio-player v-bind="$props"></radio-player>
       </div>
     </div>
   </div>
@@ -24,10 +22,8 @@
   bottom: 0;
   width: 100%;
   background-color: var(--primary-color);
-}
-.player-body {
   flex: 1 1 auto;
-  padding: 0.5rem 0.5rem;
+  /* padding: 0.5rem 0.5rem; */
 }
 </style>
 

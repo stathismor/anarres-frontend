@@ -27,33 +27,19 @@ export default {
 <style>
 @import '../assets/css/variables.css';
 body {
-  background: #edecec url(../assets/img/background.png);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  margin: 0;
+  min-height: 80vh;
+  background: var(--background-color) url(../assets/img/background.svg);
   background-repeat: no-repeat;
-  background-position: 50% 58%;
-
-  /* background: var(--primary-color); */
+  background-position: 50% 2rem;
+  background-size: contain;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1.428572;
-  margin: 0;
 }
-
-/* a {
-  background-color: transparent;
-  color: #2196f3;
-}
-
-a:active,
-a:focus,
-a:hover {
-  color: #42a5f5;
-} */
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
