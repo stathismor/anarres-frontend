@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="135.12074mm"
-   height="127.59162mm"
-   viewBox="0 0 135.12074 127.59162"
+   width="150mm"
+   height="150mm"
+   viewBox="0 0 150 150"
    version="1.1"
    id="svg5"
    sodipodi:docname="background.svg"
@@ -22,16 +22,36 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="1.1313833"
-     inkscape:cx="12.816169"
-     inkscape:cy="210.80389"
+     showgrid="true"
+     inkscape:zoom="0.8000088"
+     inkscape:cx="448.74506"
+     inkscape:cy="251.87223"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     objecttolerance="10000"
+     guidetolerance="10000"
+     inkscape:snap-path-clip="false"
+     inkscape:snap-path-mask="false"
+     inkscape:snap-perpendicular="false"
+     inkscape:snap-tangential="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid88" />
+  </sodipodi:namedview>
   <defs
      id="defs2" />
   <g
@@ -39,17 +59,19 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-32.90185,-93.844753)">
-    <circle
-       style="fill:#ba1a1a;stroke-width:0.264583;fill-opacity:1"
+    <ellipse
+       style="fill:#ba1a1a;fill-opacity:1;stroke-width:0.322776"
        id="path129"
-       cx="54.53648"
-       cy="199.80174"
-       r="21.63463" />
+       cx="14.654828"
+       cy="225.00746"
+       rx="26.458332"
+       ry="26.327837"
+       transform="rotate(-11.536946)" />
     <circle
-       style="fill:#1c366c;stroke-width:0.264583;fill-opacity:1"
+       style="fill:#1c366c;fill-opacity:1;stroke-width:0.302118"
        id="path163"
-       cx="117.32833"
-       cy="144.53902"
-       r="50.694263" />
+       cx="125.03457"
+       cy="151.67307"
+       r="57.886028" />
   </g>
 </svg>
