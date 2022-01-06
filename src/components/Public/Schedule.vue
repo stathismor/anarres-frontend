@@ -1,58 +1,67 @@
 <template>
-  <section
-    id="content"
-    role="main"
-    class="d-flex align-items-stretch"
-    style="height: 100vh"
-  >
-    <div class="container pt-5 pb-5 h-100" style="flex: 1">
-      <div class="card" style="height: 100%">
-        <div class="card-header bg-primary-dark">
-          <div class="d-flex align-items-center">
-            <div class="flex-shrink">
-              <h2 class="card-title py-2">
-                <template v-if="stationName">
-                  {{ stationName }}
-                </template>
-                <template v-else>
-                  <translate key="lang_title">Schedule</translate>
-                </template>
-              </h2>
-            </div>
-          </div>
-        </div>
-
-        <div id="station-schedule-calendar">
-          <schedule
-            ref="schedule"
-            :schedule-url="scheduleUrl"
-            :station-time-zone="stationTimeZone"
-          ></schedule>
-        </div>
-      </div>
-    </div>
-  </section>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Monday</th>
+        <th scope="col">Thursday</th>
+        <th scope="col">Sunday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">22:00</th>
+        <td>PsychOmagic (phren)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">23:00</th>
+        <td>Saturnalia (Filty Pagan)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">22:00</th>
+        <td></td>
+        <td>Cosmodvck (winter)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">23:00</th>
+        <td></td>
+        <td>Umbra (naboer)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">20:00</th>
+        <td></td>
+        <td></td>
+        <td>Post-Engineering (Nordsee)</td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
-<style lang="css">
-.schedule.embed .container {
-  max-width: 100%;
-  padding: 0 !important;
+<style scoped>
+.table {
+  width: 50%;
+  height: 50%;
 }
-#station-schedule-calendar {
-  overflow-y: auto;
+.table tbody {
+  color: var(--foreground-color);
+}
+.table tbody td {
+  font-size: 2rem;
+  text-align: start;
+}
+.table tbody th {
+  font-size: 1.25rem;
+}
+.table thead th {
+  font-size: 1.25rem;
+}
+.table thead {
+  color: var(--foreground-color);
 }
 </style>
-
-<script>
-import Schedule from '~/components/Common/ScheduleView';
-
-export default {
-  components: { Schedule },
-  props: {
-    scheduleUrl: String,
-    stationName: String,
-    stationTimeZone: String,
-  },
-};
-</script>
