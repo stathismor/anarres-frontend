@@ -31,6 +31,9 @@
 <style scoped>
 nav {
   background-color: var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 var(--background-color), 0 3px 4px 0 rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 var(--background-color);
 }
 nav a {
   font-size: 1.5rem;

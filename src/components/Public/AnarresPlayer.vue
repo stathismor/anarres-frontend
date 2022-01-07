@@ -9,8 +9,8 @@
 <style>
 .player {
   border-radius: 4px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.14), 0 3px 4px 0 rgba(0, 0, 0, 0.12),
-    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 0 var(--background-color), 0 3px 4px 0 rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 var(--background-color);
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -36,9 +36,8 @@ export default {
   mixins: [radioPlayerProps],
   created() {
     let handleAxiosError = (error) => {
-      let notifyMessage = this.$gettext(
-        'An error occurred and your request could not be completed.'
-      );
+      let notifyMessage =
+        'An error occurred and your request could not be completed.';
       if (error.response) {
         // Request made and server responded
         notifyMessage = error.response.data.message;

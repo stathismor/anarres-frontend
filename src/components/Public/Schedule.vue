@@ -11,33 +11,33 @@
     <tbody>
       <tr>
         <th scope="row">22:00</th>
-        <td>PsychOmagic (phren)</td>
+        <td><RadioShow show="PsychOmagic" producer="phren" /></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <th scope="row">23:00</th>
-        <td>Saturnalia (Filthy Pagan)</td>
+        <td><RadioShow show="Saturnalia" producer="Filthy Pagan" /></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <th scope="row">22:00</th>
         <td></td>
-        <td>Cosmodvck (winter)</td>
+        <td><RadioShow show="Cosmodvck" producer="winter" /></td>
         <td></td>
       </tr>
       <tr>
         <th scope="row">23:00</th>
         <td></td>
-        <td>Umbra (naboer)</td>
+        <td><RadioShow show="Umbra" producer="naboer" /></td>
         <td></td>
       </tr>
       <tr>
         <th scope="row">20:00</th>
         <td></td>
         <td></td>
-        <td>Post-Engineering (Nordsee)</td>
+        <td><RadioShow show="Post-Engineering" producer="Nordsee" /></td>
       </tr>
     </tbody>
   </table>
@@ -64,3 +64,15 @@
   color: var(--foreground-color);
 }
 </style>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import RadioShow from '@/components/Common/RadioShow.vue';
+
+@Component({
+  components: {
+    RadioShow,
+  },
+})
+export default class Schedule extends Vue {}
+</script>
