@@ -45,22 +45,20 @@
 
 <style scoped>
 .table {
-  width: 50%;
-  height: 50%;
-  overflow: hidden;
+  max-width: 50%;
 }
 .table tbody {
   color: var(--foreground-color);
 }
 .table tbody td {
-  font-size: 2rem;
+  font-size: 0.75em;
   text-align: start;
 }
 .table tbody th {
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
 }
 .table thead th {
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
 }
 .table thead {
   color: var(--foreground-color);
