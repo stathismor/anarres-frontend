@@ -10857,6 +10857,12 @@ textarea.form-control-sm:not([rows="1"]) {
     right: .7em
 }
 
+body #main {
+    padding-bottom: 75px;
+    padding-top: 100px;
+    min-height: 100vh
+}
+
 @media (min-width:992px) {
     body.has-sidebar #main {
         margin-left: 17.5rem
