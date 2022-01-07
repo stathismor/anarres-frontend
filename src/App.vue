@@ -28,7 +28,7 @@ export default {
 @import '../assets/css/variables.css';
 body {
   margin: 0;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   background: var(--background-color) url(../assets/img/background.svg)
     no-repeat center center;
   background-repeat: no-repeat;

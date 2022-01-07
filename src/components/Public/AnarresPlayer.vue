@@ -16,9 +16,8 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  position: relative;
+  position: absolute;
   word-wrap: break-word;
-  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: var(--primary-color);
