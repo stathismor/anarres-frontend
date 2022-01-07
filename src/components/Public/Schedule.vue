@@ -17,7 +17,7 @@
       </tr>
       <tr>
         <th scope="row">23:00</th>
-        <td>Saturnalia (Filty Pagan)</td>
+        <td>Saturnalia (Filthy Pagan)</td>
         <td></td>
         <td></td>
       </tr>
@@ -47,6 +47,7 @@
 .table {
   width: 50%;
   height: 50%;
+  overflow: hidden;
 }
 .table tbody {
   color: var(--foreground-color);

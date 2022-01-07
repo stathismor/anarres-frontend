@@ -1,25 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <anarres-player
-        requestListUri="/api/station/1/requests"
-        downloadPlaylistUri="/public/anarres/playlist.pls"
-        nowPlayingUri="https://admin.anarres.fm/api/nowplaying/1"
-        v-bind:showAlbumArt="true"
-        v-bind:useNchan="false"
-      />
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <navbar />
+    <anarres-player
+      requestListUri="/api/station/1/requests"
+      downloadPlaylistUri="/public/anarres/playlist.pls"
+      nowPlayingUri="https://admin.anarres.fm/api/nowplaying/1"
+      v-bind:showAlbumArt="true"
+      v-bind:useNchan="false"
+    />
     <router-view />
   </div>
 </template>
 
 <script type="text/javascript">
 import AnarresPlayer from './components/Public/AnarresPlayer.vue';
+import Navbar from './components/Common/Navbar.vue';
 export default {
   components: {
-    AnarresPlayer, // register component
+    AnarresPlayer,
+    Navbar,
   },
 };
 </script>

@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <div class="player">
-      <div class="stations nowplaying">
-        <radio-player v-bind="$props"></radio-player>
-      </div>
+  <div class="player">
+    <div class="stations nowplaying">
+      <radio-player v-bind="$props"></radio-player>
     </div>
   </div>
 </template>

@@ -30,9 +30,8 @@ export default function (component) {
       el: el,
       created() {
         let handleAxiosError = (error) => {
-          let notifyMessage = this.$gettext(
-            'An error occurred and your request could not be completed.'
-          );
+          let notifyMessage =
+            'An error occurred and your request could not be completed.';
           if (error.response) {
             // Request made and server responded
             notifyMessage = error.response.data.message;
