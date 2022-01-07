@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  position: absolute;
+  position: fixed;
   word-wrap: break-word;
   bottom: 0;
   width: 100%;
