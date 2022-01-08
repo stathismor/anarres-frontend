@@ -25,9 +25,11 @@ export default {
 
 <style>
 @import '../assets/css/variables.css';
+
 body {
   margin: 0;
   min-height: 100vh;
+  background-color: var(--background-color) !important;
   background: var(--background-color) url(../assets/img/background.svg)
     no-repeat center center;
   background-repeat: no-repeat;
@@ -47,14 +49,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-}
-
-#nav a {
-  font-weight: bold;
-  /* color: #2c3e50; */
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

@@ -45,9 +45,9 @@
             {{ time_display_played }}
           </div>
           <div class="time-display-progress">
-            <div class="progress">
+            <div class="player-progress">
               <div
-                class="progress-bar"
+                class="player-progress-bar"
                 role="progressbar"
                 v-bind:style="{ width: time_percent + '%' }"
               ></div>
@@ -62,10 +62,7 @@
     <div class="radio-controls">
       <volume-controls :get-volume="getVolume" @set_volume="setVolume" />
       <div>
-        <a
-          class="btn btn-sm btn-outline-secondary"
-          v-b-modal.song_history_modal
-        >
+        <a class="btn btn-sm" v-b-modal.song_history_modal>
           <icon class="foreground-color" icon="history"></icon>
         </a>
       </div>
@@ -82,14 +79,22 @@
   color: var(--foreground-color);
 }
 
-.progress-bar {
+.player-progress {
+  background-color: var(--background-color);
+  display: flex;
+  height: 0.25rem;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.player-progress-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   text-align: center;
   white-space: nowrap;
-  background-color: var(--background-color);
+  background-color: var(--foreground-color);
 }
 .radio-player-widget {
   display: flex;

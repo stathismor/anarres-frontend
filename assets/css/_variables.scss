@@ -1,0 +1,22 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+// First override some or all individual color variables
+$primary: white;
+$secondary: #bf0a26;
+$light: #262626;
+$dark: #131313;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  light: $light,
+  dark: $dark,
+  anarres: $secondary,
+);
+
+@import '~bootstrap/scss/bootstrap';
