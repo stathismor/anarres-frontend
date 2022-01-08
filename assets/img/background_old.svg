@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="150mm"
+   height="150mm"
+   viewBox="0 0 150 150"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="background.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   inkscape:export-filename="/home/stathis/src/anarres-frontend/assets/img/icon.png"
+   inkscape:export-xdpi="5.4186668"
+   inkscape:export-ydpi="5.4186668"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.8000088"
+     inkscape:cx="448.12007"
+     inkscape:cy="251.87223"
+     inkscape:window-width="1521"
+     inkscape:window-height="891"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     objecttolerance="10000"
+     guidetolerance="10000"
+     inkscape:snap-path-clip="false"
+     inkscape:snap-path-mask="false"
+     inkscape:snap-perpendicular="false"
+     inkscape:snap-tangential="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid88" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.90185,-93.844753)">
+    <ellipse
+       style="fill:#ba1a1a;fill-opacity:1;stroke-width:0.322776"
+       id="path129"
+       cx="14.654828"
+       cy="225.00746"
+       rx="26.458332"
+       ry="26.327837"
+       transform="rotate(-11.536946)" />
+    <circle
+       style="fill:#1c366c;fill-opacity:1;stroke-width:0.302118"
+       id="path163"
+       cx="125.03457"
+       cy="151.67307"
+       r="57.886028" />
+  </g>
+</svg>
