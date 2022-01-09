@@ -11,7 +11,6 @@
   >
     <template #cell(name)="row">
       <album-art
-        v-if="showAlbumArt"
         :src="row.item.song_art"
         :width="40"
         class="float-left pr-3"

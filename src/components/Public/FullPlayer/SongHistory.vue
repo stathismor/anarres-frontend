@@ -3,7 +3,7 @@
     <p v-if="history.length <= 0">No records to display.</p>
     <div class="song" v-for="(row, index) in history" v-bind:key="index">
       <strong class="order">{{ history.length - index }}</strong>
-      <img v-if="showAlbumArt" class="art" :src="row.song.art" />
+      <img class="art" :src="row.song.art" />
       <div class="name">
         <strong v-html="row.song.title"></strong>
         <span v-html="albumAndArtist(row.song)"></span>
@@ -76,10 +76,6 @@ import { DateTime } from 'luxon';
 export default {
   props: {
     history: Array,
-    showAlbumArt: {
-      type: Boolean,
-      default: true,
-    },
   },
   methods: {
     unixTimestampToDate(timestamp) {

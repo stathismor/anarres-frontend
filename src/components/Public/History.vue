@@ -5,10 +5,7 @@
       v-bind="$props"
       @np_updated="setNowPlaying"
     ></now-playing>
-    <song-history
-      :show-album-art="showAlbumArt"
-      :history="history"
-    ></song-history>
+    <song-history :history="history"></song-history>
   </div>
 </template>
 
@@ -19,12 +16,6 @@ import NowPlaying, { nowPlayingProps } from '../Common/NowPlaying';
 export default {
   mixins: [nowPlayingProps],
   components: { NowPlaying, SongHistory },
-  props: {
-    showAlbumArt: {
-      type: Boolean,
-      default: true,
-    },
-  },
   data() {
     return {
       history: [],

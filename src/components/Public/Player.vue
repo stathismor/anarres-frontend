@@ -12,10 +12,7 @@
         :url="current_stream.url"
         is-stream
       ></play-button>
-      <div
-        class="now-playing-art"
-        v-if="showAlbumArt && np.now_playing.song.art"
-      >
+      <div class="now-playing-art" v-if="np.now_playing.song.art">
         <a v-bind:href="np.now_playing.song.art" data-fancybox target="_blank">
           <img v-bind:src="np.now_playing.song.art" alt="Album Art" />
         </a>
@@ -67,10 +64,7 @@
         </a>
       </div>
     </div>
-    <song-history-modal
-      :show-album-art="showAlbumArt"
-      ref="history_modal"
-    ></song-history-modal>
+    <song-history-modal ref="history_modal"></song-history-modal>
   </div>
 </template>
 
@@ -184,11 +178,6 @@
 .radio-player-widget i.material-icons {
   line-height: 1;
 }
-.radio-controls {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 .radio-player-widget .radio-controls {
   display: flex;
   flex-direction: row;
@@ -196,6 +185,7 @@
   margin-left: auto;
   justify-content: flex-end;
   padding-top: 2.5rem;
+  /* width: 15%; */
 }
 .radio-player-widget .radio-controls .radio-control-play-button {
   margin-right: 0.25rem;
@@ -230,10 +220,6 @@ export const radioPlayerProps = {
       },
     },
     useNchan: {
-      type: Boolean,
-      default: true,
-    },
-    showAlbumArt: {
       type: Boolean,
       default: true,
     },

@@ -1,8 +1,6 @@
 <template>
   <div class="player">
-    <div class="stations nowplaying">
-      <radio-player v-bind="$props"></radio-player>
-    </div>
+    <radio-player v-bind="$props"></radio-player>
   </div>
 </template>
 

@@ -5,7 +5,6 @@
       requestListUri="/api/station/1/requests"
       downloadPlaylistUri="/public/anarres/playlist.pls"
       nowPlayingUri="https://admin.anarres.fm/api/nowplaying/1"
-      v-bind:showAlbumArt="true"
       v-bind:useNchan="false"
     />
     <router-view />

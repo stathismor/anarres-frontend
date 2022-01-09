@@ -7,7 +7,6 @@
     hide-footer
   >
     <song-request
-      :show-album-art="showAlbumArt"
       :request-list-uri="requestListUri"
       :custom-fields="customFields"
       @submitted="doClose"
@@ -24,10 +23,6 @@ export default {
     requestListUri: {
       type: String,
       required: true,
-    },
-    showAlbumArt: {
-      type: Boolean,
-      default: true,
     },
     customFields: {
       type: Array,

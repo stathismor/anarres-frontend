@@ -7,10 +7,7 @@
     centered
     hide-footer
   >
-    <song-history
-      :show-album-art="showAlbumArt"
-      :history="history"
-    ></song-history>
+    <song-history :history="history"></song-history>
   </b-modal>
 </template>
 
@@ -19,12 +16,6 @@ import SongHistory from './SongHistory';
 
 export default {
   components: { SongHistory },
-  props: {
-    showAlbumArt: {
-      type: Boolean,
-      default: true,
-    },
-  },
   data() {
     return {
       history: [],

@@ -7,7 +7,7 @@
     </div>
     <input
       type="range"
-      class="volume-range"
+      class="form-range volume-range"
       id="volume-range"
       min="0"
       max="100"
