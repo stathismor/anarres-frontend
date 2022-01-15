@@ -1,6 +1,6 @@
 <template>
   <div class="volume-controls">
-    <div class="radio-control-mute-button">
+    <div>
       <a href="#" class="icon" title="Mute" @click.prevent="volume = 0">
         <icon icon="volume_mute"></icon>
       </a>
@@ -14,7 +14,7 @@
       step="1"
       v-model.number="volume"
     />
-    <div class="radio-control-max-volume-button">
+    <div>
       <a
         href="#"
         class="icon full-volume"
@@ -36,6 +36,11 @@
 .icon {
   color: var(--foreground-color);
 }
+@media (max-width: 575px) {
+  .icon {
+    font-size: 12px;
+  }
+}
 .full-volume {
   padding-left: 0.25rem;
 }
@@ -56,8 +61,8 @@
   width: 0.75rem;
 }
 .volume-range::-moz-range-thumb:active {
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 1rem;
+  width: 1rem;
 }
 .volume-range::-moz-range-progress {
   background-color: var(--foreground-color);
@@ -67,6 +72,7 @@
 }
 .volume-range::-moz-range-track {
   background-color: var(--background-color);
+  height: 0.25rem;
 }
 </style>
 

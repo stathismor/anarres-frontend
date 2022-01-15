@@ -1,6 +1,6 @@
 <template>
   <div class="radio-player-widget">
-    <now-playing v-bind="$props" @np_updated="setNowPlaying"></now-playing>
+    <!-- <now-playing v-bind="$props" @np_updated="setNowPlaying"></now-playing> -->
     <audio-player
       ref="player"
       v-bind:title="np.now_playing.song.text"
@@ -19,9 +19,7 @@
       </div>
       <div class="now-playing-main">
         <h6 class="now-playing-live" v-if="np.live.is_live">
-          <translate key="lang_live" class="badge badge-primary"
-            >Live</translate
-          >
+          <div key="lang_live" class="badge badge-primary">Live</div>
           {{ np.live.streamer_name }}
         </h6>
 
@@ -197,7 +195,7 @@
 
 <script>
 import AudioPlayer from '../Common/AudioPlayer';
-import NowPlaying, { nowPlayingProps } from '../Common/NowPlaying';
+// import NowPlaying, { nowPlayingProps } from '../Common/NowPlaying';
 import InitialNowPlaying from '../Entity/NowPlaying';
 import Icon from '../Common/Icon';
 import SongHistoryModal from './FullPlayer/SongHistoryModal';
@@ -207,7 +205,7 @@ import PlayButton from '../Common/PlayButton';
 import VolumeControls from '../Common/VolumeControls.vue';
 
 export const radioPlayerProps = {
-  ...nowPlayingProps,
+  // ...nowPlayingProps,
   props: {
     nowPlayingUri: {
       type: String,
@@ -232,7 +230,7 @@ export const radioPlayerProps = {
 
 export default {
   components: {
-    NowPlaying,
+    // NowPlaying,
     SongHistoryModal,
     Icon,
     PlayButton,

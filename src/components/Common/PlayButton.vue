@@ -7,7 +7,13 @@
 <style scoped>
 a {
   color: var(--secondary-color);
-  font-size: 36px;
+  font-size: 48px;
+  line-height: 0;
+}
+@media (max-width: 575px) {
+  a {
+    font-size: 32px;
+  }
 }
 </style>
 

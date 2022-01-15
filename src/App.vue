@@ -1,23 +1,24 @@
 <template>
   <div id="app">
     <navbar />
-    <anarres-player
+    <radio-player
       requestListUri="/api/station/1/requests"
       downloadPlaylistUri="/public/anarres/playlist.pls"
       nowPlayingUri="https://admin.anarres.fm/api/nowplaying/1"
       v-bind:useNchan="false"
+      radio-player
     />
     <router-view />
   </div>
 </template>
 
 <script type="text/javascript">
-import AnarresPlayer from './components/Public/AnarresPlayer.vue';
+import RadioPlayer from './components/Public/RadioPlayer.vue';
 import Navbar from './components/Common/Navbar.vue';
 export default {
   components: {
-    AnarresPlayer,
     Navbar,
+    RadioPlayer,
   },
 };
 </script>
@@ -40,7 +41,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1.428572;
-  color: var(--foreground-color);
+  /* color: var(--foreground-color); */
 }
 
 #app {

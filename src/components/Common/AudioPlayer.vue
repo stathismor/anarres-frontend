@@ -1,6 +1,6 @@
 <template>
   <div>
-    <audio ref="audio" v-if="isPlaying" v-bind:title="title" />
+    <audio ref="audio" v-if="isPlaying" />
   </div>
 </template>
 
@@ -10,9 +10,6 @@ import getLogarithmicVolume from '../../functions/getLogarithmicVolume.js';
 import vueStore from '../../store.js';
 
 export default {
-  props: {
-    title: String,
-  },
   data() {
     return {
       audio: null,

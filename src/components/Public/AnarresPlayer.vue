@@ -13,7 +13,7 @@
   min-width: 0;
   position: fixed;
   word-wrap: break-word;
-  bottom: 0;
+  /* bottom: 0; */
   width: 100%;
   background-color: var(--primary-color);
   flex: 1 1 auto;
@@ -93,6 +93,32 @@ export default {
     useNchan: {
       type: Boolean,
       default: true,
+    },
+  },
+  methods: {
+    setNowPlaying(np_new) {
+      this.np = np_new;
+      this.$emit('np_updated', np_new);
+      // this.$refs.history_modal.updateHistory(np_new);
+
+      // Set a "default" current stream if none exists.
+      if (this.current_stream.url === '' && this.streams.length > 0) {
+        let current_stream = null;
+
+        if (np_new.station.listen_url !== '') {
+          this.streams.forEach(function (stream) {
+            if (stream.url === np_new.station.listen_url) {
+              current_stream = stream;
+            }
+          });
+        }
+
+        if (current_stream === null) {
+          current_stream = this.streams[0];
+        }
+
+        this.current_stream = current_stream;
+      }
     },
   },
 };
