@@ -12,11 +12,13 @@
       </div>
     </div>
     <div class="now-playing-item">
-      <h6 class="now-playing-live" v-if="np.live.is_live">
-        {{ np.live.streamer_name }}
-      </h6>
-
       <div class="now-playing-track" v-if="np.now_playing.song.title !== ''">
+        <h6 class="now-playing-live" v-if="np.live.is_live">
+          <span class="badge rounded-pill bg-danger"> Live </span>
+          <span class="now-playing-live-producer">
+            {{ np.live.streamer_name }}
+          </span>
+        </h6>
         <h4 class="now-playing-title">
           {{ np.now_playing.song.title }}
         </h4>
@@ -86,12 +88,27 @@
   .now-playing-track {
     flex-grow: 5;
   }
+  .now-playing-live {
+    line-height: 50%;
+  }
   .now-playing-title {
     line-height: 50%;
   }
   .now-playing-artist {
     line-height: 50%;
   }
+}
+.now-playing-live {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+}
+.now-playing-live-producer {
+  margin-left: 0.25rem;
 }
 .now-playing-title {
   display: flex;
