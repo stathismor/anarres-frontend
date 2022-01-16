@@ -1,6 +1,6 @@
 <template>
   <a href="#" @click.prevent="toggle" :title="langTitle">
-    <icon :class="iconClass" :icon="icon"></icon>
+    <icon :icon="icon"></icon>
   </a>
 </template>
 
@@ -10,6 +10,11 @@ a {
   font-size: 48px;
   line-height: 0;
 }
+
+a:hover {
+  color: var(--secondary-color);
+}
+
 @media (max-width: 575px) {
   a {
     font-size: 32px;
@@ -19,9 +24,7 @@ a {
 
 <script>
 import Icon from './Icon';
-
 import getUrlWithoutQuery from '../../functions/getUrlWithoutQuery';
-
 import store from '../../store.js';
 
 export default {
@@ -33,7 +36,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    iconClass: String,
   },
   computed: {
     isPlaying() {

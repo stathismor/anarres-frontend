@@ -28,6 +28,7 @@
   width: 100%;
   background-color: var(--primary-color);
   min-width: 0;
+  padding: 0 0.25rem 0.25rem 0;
 }
 .play-button {
   display: flex;

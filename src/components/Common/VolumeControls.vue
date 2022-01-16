@@ -7,7 +7,7 @@
     </div>
     <input
       type="range"
-      class="form-range volume-range"
+      class="form-range volume-range styled-slider slider-progress"
       id="volume-range"
       min="0"
       max="100"
@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  line-height: 0;
 }
 .icon {
   color: var(--foreground-color);
@@ -74,6 +75,49 @@
   background-color: var(--background-color);
   height: 0.25rem;
 }
+
+/*webkit*/
+input[type='range'].styled-slider {
+  -webkit-appearance: none;
+}
+
+/*progress support*/
+input[type='range'].styled-slider.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 2em + var(--ratio) * (100% - 2em));
+}
+
+input[type='range'].styled-slider:focus {
+  outline: none;
+}
+
+input[type='range'].styled-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  background: var(--foreground-color);
+  border: none;
+  box-shadow: 0 0 2px var(--background-color);
+  margin-top: calc(max((1em - 1px - 1px) * 0.7, 0px) - 2em * 0.5);
+}
+
+input[type='range'].styled-slider::-webkit-slider-runnable-track {
+  height: 0.25em;
+  border-radius: 0.5em;
+  background: var(--foreground-color);
+  box-shadow: none;
+}
+input[type='range'].styled-slider::-webkit-slider-thumb:hover {
+  background: var(--secondary-color);
+}
+
+input[type='range'].styled-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(var(--foreground-color), var(--foreground-color))
+      0 / var(--sx) 100% no-repeat,
+    var(--background-color);
+}
 </style>
 
 <script>
@@ -82,6 +126,19 @@ export default {
   components: { Icon },
   props: {
     getVolume: Function,
+  },
+  mounted() {
+    // HACK: Needed for Chrome volume slider
+    for (let e of document.querySelectorAll(
+      'input[type="range"].slider-progress'
+    )) {
+      e.style.setProperty('--value', this.getVolume());
+      e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+      e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+      e.addEventListener('input', () =>
+        e.style.setProperty('--value', this.getVolume())
+      );
+    }
   },
   computed: {
     volume: {
