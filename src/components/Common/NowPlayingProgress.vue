@@ -14,7 +14,7 @@
     <div class="now-playing-item">
       <div class="now-playing-track" v-if="np.now_playing.song.title !== ''">
         <h6 class="now-playing-live" v-if="np.live.is_live">
-          <span class="badge rounded-pill bg-danger"> Live </span>
+          <span class="live-pill badge rounded-pill bg-danger"> Live </span>
           <span class="now-playing-live-producer">
             {{ np.live.streamer_name }}
           </span>
@@ -65,37 +65,34 @@
   flex: 1 1 auto;
   flex-direction: column;
   margin: 0.25rem;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .now-playing-art {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 0.25rem 0.25rem 0.25rem 0;
-  width: 75px;
+  width: 80px;
   border-radius: 2px;
 }
 .now-playing-track {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 0.25rem;
+  padding-top: 0.5rem;
 }
 @media (max-width: 575px) {
   .now-playing-art {
-    width: 50px;
-  }
-  .now-playing-track {
-    flex-grow: 5;
+    width: 60px;
   }
   .now-playing-live {
-    line-height: 50%;
+    line-height: 35%;
   }
   .now-playing-title {
-    line-height: 50%;
+    line-height: 35%;
   }
   .now-playing-artist {
-    line-height: 50%;
+    line-height: 35%;
   }
 }
 .now-playing-live {
@@ -106,21 +103,29 @@
   display: flex;
   align-items: center;
   padding-right: 2rem;
+  line-height: 75%;
+  margin-bottom: 0.25rem;
 }
 .now-playing-live-producer {
   margin-left: 0.25rem;
+  margin-top: 0.25rem;
 }
 .now-playing-title {
   display: flex;
   justify-content: flex-start;
   font-size: 1rem;
   white-space: nowrap;
+  max-width: 10vw;
+  line-height: 75%;
+  margin-bottom: 0.25rem;
 }
 .now-playing-artist {
   display: flex;
   justify-content: flex-start;
   font-size: 0.75rem;
   white-space: nowrap;
+  max-width: 10vw;
+  margin-bottom: 0.25rem;
 }
 .time-display-container {
   display: flex;
