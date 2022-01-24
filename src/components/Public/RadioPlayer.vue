@@ -29,6 +29,7 @@
   background-color: var(--primary-color);
   min-width: 0;
   padding: 0 0.25rem 0.25rem 0;
+  z-index: 999;
 }
 .play-button {
   display: flex;
@@ -39,6 +40,12 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 10rem;
+}
+.icon {
+  color: var(--foreground-color);
+}
+.history a:hover {
+  color: var(--foreground-color);
 }
 @media (max-width: 575px) {
   .player-controls {
@@ -59,9 +66,7 @@
 
 <script>
 import PlayButton from '../Common/PlayButton';
-import NowPlayingProgress, {
-  nowPlayingProps,
-} from '../Common/NowPlayingProgress';
+import NowPlayingProgress from '../Common/NowPlayingProgress';
 import InitialNowPlaying from '../Entity/NowPlaying';
 import NchanSubscriber from 'nchan';
 import axios from 'axios';
@@ -73,7 +78,6 @@ import AudioPlayer from '../Common/AudioPlayer';
 import SongHistoryModal from './FullPlayer/SongHistoryModal';
 
 export const radioPlayerProps = {
-  ...nowPlayingProps,
   props: {
     nowPlayingUri: {
       type: String,

@@ -33,8 +33,6 @@ body {
   background: var(--background-color) url(../assets/img/background.svg)
     no-repeat center center;
   background-repeat: no-repeat;
-  /* background-position: 50% 2rem; */
-  /* background-size: contain; */
   font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
