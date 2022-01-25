@@ -1,7 +1,8 @@
 <template>
   <div class="container container-sm schedule-container">
+    <h3 class="text-light fw-bold schedule-title">Schedule</h3>
     <div class="card bg-transparent border-0 h-100">
-      <div class="card-header">
+      <div class="card-header schedule-header">
         <ul class="nav nav-tabs card-header-tabs border-bottom border-3">
           <li class="nav-item">
             <a
@@ -102,17 +103,17 @@
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="naboer-morning"
+              producer="naboer"
               title="Early Neural Activations"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="filthy-afternoon"
+              producer="Filthy Pagan"
               title="Noonwraith"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="naboer-evening"
+              producer="naboer"
               title="Ganuma de Anarres"
               time="18:00 - 21:00"
             />
@@ -120,19 +121,19 @@
               producer="Giwta + El"
               title="Cosmic Candy"
               time="21:00 - 22:00"
-              isLive="true"
+              :isLive="true"
             />
             <broadcast
               producer="phren"
               title="Psychomagic"
               time="22:00 - 23:00"
-              isLive="true"
+              :isLive="true"
             />
             <broadcast
-              producer="filthy"
+              producer="Filthy Pagan"
               title="Saturnalia"
               time="23:00 - 00:00"
-              isLive="true"
+              :isLive="true"
             />
           </div>
         </div>
@@ -143,22 +144,22 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="filthy-night"
+              producer="Filthy Pagan"
               title="Dying after Midnight"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="naboer-morning"
+              producer="naboer"
               title="Echoes in the Exoshpere"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="naboer-afternoon"
+              producer="naboer"
               title="Dancing in a Batcave"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="winter-evening"
+              producer="winter"
               title="Black is the warmest colour"
               time="18:00 - 00:00"
             />
@@ -170,10 +171,26 @@
           id="wednesday"
         >
           <div class="schedule-day">
-            <broadcast producer="winter-night" time="00:00 - 06:00" />
-            <broadcast producer="filhty-morning" time="06:00 - 12:00" />
-            <broadcast producer="winter-afternoon" time="12:00 - 18:00" />
-            <broadcast producer="filhty-evening" time="18:00 - 21:00" />
+            <broadcast
+              producer="winter"
+              title="Smokey bars and single malts"
+              time="00:00 - 06:00"
+            />
+            <broadcast
+              producer="Filthy Pagan"
+              title="Dungeons, Synths and Irene"
+              time="06:00 - 12:00"
+            />
+            <broadcast
+              producer="winter"
+              title="Long name!For.Post.Playlist"
+              time="12:00 - 18:00"
+            />
+            <broadcast
+              producer="Filthy Pagan"
+              title="Steel Life"
+              time="18:00 - 21:00"
+            />
           </div>
         </div>
         <div
@@ -182,10 +199,26 @@
           id="thursday"
         >
           <div class="schedule-day">
-            <broadcast producer="filhty-night" time="00:00 - 06:00" />
-            <broadcast producer="winter-morning" time="06:00 - 12:00" />
-            <broadcast producer="filthy-afternoon" time="12:00 - 18:00" />
-            <broadcast producer="phren-evening" time="18:00 - 22:00" />
+            <broadcast
+              producer="Filthy Pagan"
+              title="Dying after Midnight"
+              time="00:00 - 06:00"
+            />
+            <broadcast
+              producer="winter"
+              title="Echoes in the Exoshpere"
+              time="06:00 - 12:00"
+            />
+            <broadcast
+              producer="Filthy Pagan"
+              title="Noonwraith"
+              time="12:00 - 18:00"
+            />
+            <broadcast
+              producer="phren"
+              title="Psychonautics"
+              time="18:00 - 22:00"
+            />
             <broadcast
               producer="winter"
               title="Cosmodvck"
@@ -203,11 +236,23 @@
 .schedule-container {
   max-width: 37rem;
 }
+.schedule-header {
+  padding-top: 0;
+}
+.schedule-title {
+  margin-top: 1rem;
+  line-height: 0.5rem;
+}
 .schedule-day {
   height: 100%;
   display: flex;
   flex-direction: column;
   /* border: 1px solid red; */
+}
+@media (max-width: 575px) {
+  .schedule-container {
+    font-size: 90%;
+  }
 }
 </style>
 

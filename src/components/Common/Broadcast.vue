@@ -4,16 +4,22 @@
     :class="{ 'broadcast-live': isLive, 'broadcast-playlist': !isLive }"
   >
     <div class="broadcast-item">
-      <div class="broadcast-time">{{ time }}</div>
+      <div class="last-row">
+        <div class="broadcast-time">{{ time }}</div>
+        <div>
+          <span
+            class="badge broadcast-badge"
+            :class="{ 'bg-danger': isLive, 'bg-success': !isLive }"
+            >{{ isLive ? 'live' : 'playlist' }}
+          </span>
+        </div>
+      </div>
       <div class="broadcast-title">
-        <span
-          class="badge broadcast-badge"
-          :class="{ 'bg-danger': isLive, 'bg-success': !isLive }"
-          >{{ isLive ? 'live' : 'playlist' }}
-        </span>
         <div class="fw-bold">{{ title }}</div>
       </div>
-      <div class="fw-light">{{ producer }}</div>
+      <div>
+        <a :href="getMixCloud">{{ producer }}</a>
+      </div>
     </div>
   </div>
 </template>
@@ -25,7 +31,7 @@
   /* justify-content: center; */
   /* align-items: center; */
   /* padding-left: 30%; */
-  border-bottom: 0.05rem solid var(--foreground-color);
+  border-bottom: 1px solid #fff6;
 }
 .broadcast-item {
   display: flex;
@@ -33,14 +39,21 @@
   /* width: 20rem; */
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 0.25rem;
 }
 .broadcast-title {
   display: flex;
 }
+.last-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .broadcast-badge {
-  text-align: center;
-  line-height: 1rem;
-  margin-right: 0.25rem;
+  /* text-align: center; */
+  /* line-height: 1rem; */
+  /* margin-right: 0.25rem; */
+  font-weight: 500;
 }
 .broadcast-live {
   background-color: #bf0a261a;
@@ -54,9 +67,22 @@
 .broadcast-playlist:hover {
   background-color: #1c366c80;
 }
+a,
+a:visited {
+  color: var(--foreground-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--secondary-color);
+}
+@media (max-width: 575px) {
+  .broadcast-container {
+    line-height: 1rem;
+  }
+}
 </style>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
@@ -75,6 +101,16 @@ import { Component, Vue } from 'vue-property-decorator';
     },
     isLive: {
       type: Boolean,
+    },
+  },
+  computed: {
+    getMixCloud() {
+      const mixClouds = {
+        'Filthy Pagan': 'https://www.mixcloud.com/Filthy_Pagan/',
+        naboer: 'https://www.mixcloud.com/naboer0/',
+        phren: 'https://www.mixcloud.com/phrenic/',
+      };
+      return mixClouds[this.producer];
     },
   },
 })
