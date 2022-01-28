@@ -109,6 +109,7 @@ import { Component, Vue } from 'vue-property-decorator';
         'Filthy Pagan': 'https://www.mixcloud.com/Filthy_Pagan/',
         naboer: 'https://www.mixcloud.com/naboer0/',
         phren: 'https://www.mixcloud.com/phrenic/',
+        winter: 'https://www.mixcloud.com/cosmodvck/',
       };
       return mixClouds[this.producer];
     },

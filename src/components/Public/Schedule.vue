@@ -2,7 +2,7 @@
   <div class="container container-sm schedule-container">
     <h3 class="text-light fw-bold schedule-title">Schedule</h3>
     <div class="card bg-transparent border-0 h-100">
-      <div class="card-header schedule-header">
+      <div class="card-header border-bottom-0 schedule-header">
         <ul class="nav nav-tabs card-header-tabs border-bottom border-3">
           <li class="nav-item">
             <a
@@ -241,7 +241,7 @@
 }
 .schedule-title {
   margin-top: 1rem;
-  line-height: 0.5rem;
+  line-height: 1rem;
 }
 .schedule-day {
   height: 100%;
