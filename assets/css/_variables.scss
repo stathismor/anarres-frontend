@@ -6,18 +6,32 @@
 // Color system
 
 // First override some or all individual color variables
-$primary: white;
-$secondary: #bf0a26;
-$light: #262626;
-$dark: #131313;
-$danger: #bf0a26;
+// $primary: white;
+// $secondary: #bf0a26;
+// $light: #262626;
+// $dark: #131313;
+// $danger: #bf0a26;
+// $body-color: white;
+// $body-bg: yellow;
+
+$red: #bf0a26;
+$gray-800: #262626;
+$black: #131313;
+$primary: $black;
+$secondary: $gray-800;
+$success: #1c366cff;
+$danger: $red;
+$light: white;
 
 $theme-colors: (
   primary: $primary,
+  red: $red,
+  gray-800: $gray-800,
+  black: $black,
   secondary: $secondary,
   light: $light,
-  dark: $dark,
   danger: $danger,
+  success: $success,
 );
 
 @import '~bootstrap/scss/bootstrap';

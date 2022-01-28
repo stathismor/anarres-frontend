@@ -23,9 +23,9 @@
 
     <template #modal-footer="slotProps">
       <slot name="modal-footer" v-bind="slotProps">
-        <b-button variant="default" type="button" @click="close">
+        <button variant="default" type="button" @click="close">
           <translate key="lang_btn_close">Close</translate>
-        </b-button>
+        </button>
         <b-button
           :variant="disableSaveButton ? 'danger' : 'primary'"
           type="submit"

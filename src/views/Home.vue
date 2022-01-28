@@ -6,11 +6,12 @@
 
 <style scoped>
 .home {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 80vh;
+  justify-content: center; */
+  /* min-height: 80vh; */
   overflow: hidden;
+  margin-bottom: 6rem;
 }
 </style>
 

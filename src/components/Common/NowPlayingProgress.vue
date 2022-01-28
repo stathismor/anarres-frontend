@@ -103,7 +103,7 @@
   display: flex;
   align-items: center;
   padding-right: 2rem;
-  line-height: 75%;
+  line-height: 80%;
   margin-bottom: 0.25rem;
 }
 .now-playing-live-producer {
@@ -116,7 +116,7 @@
   font-size: 1rem;
   white-space: nowrap;
   max-width: 10vw;
-  line-height: 75%;
+  line-height: 80%;
   margin-bottom: 0.25rem;
 }
 .now-playing-artist {
