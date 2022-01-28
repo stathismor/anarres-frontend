@@ -265,7 +265,9 @@ export default {
   },
   data() {
     return {
-      activeItem: 'monday',
+      activeItem: new Date()
+        .toLocaleString('en-us', { weekday: 'long' })
+        .toLowerCase(),
     };
   },
   methods: {
