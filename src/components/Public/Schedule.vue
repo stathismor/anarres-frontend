@@ -98,27 +98,27 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="winter"
+              producer="Darkjazz, Noir Jazz, Nu Jazz"
               title="Smokey bars and single malts"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="naboer"
+              producer="Indie, Alternative, Punk"
               title="Early Neural Activations"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="Filthy Pagan"
+              producer="Folk and Chill"
               title="Noonwraith"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="naboer"
+              producer="Synthwave, Coldwave, Darkwave"
               title="Ganuma de Anarres"
               time="18:00 - 21:00"
             />
             <broadcast
-              producer="Giwta + El"
+              producer="ΜαΓιώ"
               title="Cosmic Candy"
               time="21:00 - 22:00"
               :isLive="true"
@@ -144,23 +144,23 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Filthy Pagan"
+              producer="Atmospheric Black/Doom Metal"
               title="Dying after Midnight"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="naboer"
+              producer="IDM Ambient, Future Garage"
               title="Echoes in the Exoshpere"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="naboer"
+              producer="Post Punk, New Wave"
               title="Dancing in a Batcave"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="winter"
-              title="Black is the warmest colour"
+              producer="Post Hardcore, Blackgaze, Post Metal"
+              title="Black is the Warmest Colour"
               time="18:00 - 00:00"
             />
           </div>
@@ -172,23 +172,23 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="winter"
-              title="Smokey bars and single malts"
+              producer="Slow and Depressive"
+              title="Depression in a can"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="Filthy Pagan"
-              title="Dungeons, Synths and Irene"
+              producer="Psych Folk, Acid Folk"
+              title="Acid Vibrations"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="winter"
+              producer="Post Rock"
               title="Long name!For.Post.Playlist"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="Filthy Pagan"
-              title="Steel Life"
+              producer="Psychedelic, Garage, World Vibes"
+              title="Psychonautics"
               time="18:00 - 21:00"
             />
           </div>
@@ -200,31 +200,143 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Filthy Pagan"
+              producer="Atmospheric Black/Doom Metal"
               title="Dying after Midnight"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="winter"
-              title="Echoes in the Exoshpere"
+              producer="Dungeon Synth/Ambient"
+              title="Dungeons, Synths and Irene"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="Filthy Pagan"
-              title="Noonwraith"
+              producer="Post Punk, New Wave"
+              title="Dancing in a Batcave"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="phren"
-              title="Psychonautics"
+              producer="Post Hardcore, Blackgaze, Post Metal"
+              title="Black is the Warmest Colour"
               time="18:00 - 22:00"
             />
             <broadcast
               producer="winter"
               title="Cosmodvck"
               time="22:00 - 23:00"
+              :isLive="true"
             />
-            <broadcast producer="naboer" title="Umbra" time="23:00 - 00:00" />
+            <broadcast
+              producer="naboer"
+              title="Umbra"
+              time="23:00 - 00:00"
+              :isLive="true"
+            />
+          </div>
+        </div>
+        <div
+          class="tab-pane fade h-100"
+          :class="{ 'active show': isActive('friday') }"
+          id="friday"
+        >
+          <div class="schedule-day">
+            <broadcast
+              producer="Darkjazz, Noir Jazz, Nu Jazz"
+              title="Smokey bars and single malts"
+              time="00:00 - 06:00"
+            />
+            <broadcast
+              producer="Psych Folk, Acid Folk"
+              title="Acid Vibrations"
+              time="06:00 - 12:00"
+            />
+            <broadcast
+              producer="Post Punk, New Wave"
+              title="Dancing in a Batcave"
+              time="12:00 - 18:00"
+            />
+            <broadcast
+              producer="Power/Heavy/Thrash Metal"
+              title="Steel Life"
+              time="18:00 - 00:00"
+            />
+          </div>
+        </div>
+        <div
+          class="tab-pane fade h-100"
+          :class="{ 'active show': isActive('saturday') }"
+          id="saturday"
+        >
+          <div class="schedule-day">
+            <broadcast
+              producer="Slow and Depressive"
+              title="Depression in a can"
+              time="00:00 - 06:00"
+            />
+            <broadcast
+              producer="Dungeon Synth/Ambient"
+              title="Dungeons, Synths and Irene"
+              time="06:00 - 12:00"
+            />
+            <broadcast
+              producer="victoria"
+              title="Ιντερμέδιο (every second week)"
+              time="12:00 - 13:00"
+              :isLive="true"
+            />
+            <broadcast
+              producer="Folk and Chill"
+              title="Noonwraith"
+              time="13:00 - 18:00"
+            />
+            <broadcast
+              producer="Psychedelic, Garage, World Vibes"
+              title="Psychonautics"
+              time="18:00 - 00:00"
+            />
+          </div>
+        </div>
+        <div
+          class="tab-pane fade h-100"
+          :class="{ 'active show': isActive('sunday') }"
+          id="sunday"
+        >
+          <div class="schedule-day">
+            <broadcast
+              producer="Darkjazz, Noir Jazz, Nu Jazz"
+              title="Smokey bars and single malts"
+              time="00:00 - 06:00"
+            />
+            <broadcast
+              producer="Indie, Alternative, Punk"
+              title="Early Neural Activations"
+              time="06:00 - 10:00"
+            />
+            <broadcast
+              producer=""
+              title="Guest Playlist (victoria)"
+              time="10:00 - 12:00"
+            />
+            <broadcast
+              producer="Post Rock"
+              title="Long name!For.Post.Playlist"
+              time="12:00 - 18:00"
+            />
+            <broadcast
+              producer="Synthwave, Coldwave, Darkwave"
+              title="Ganuma de Anarres"
+              time="18:00 - 20:00"
+            />
+            <broadcast
+              producer="saf"
+              title="post-engineering"
+              time="20:00 - 22:00"
+              :isLive="true"
+            />
+            <broadcast
+              producer=""
+              title="Guest Playlist (victoria)"
+              time="22:00 - 00:00"
+            />
           </div>
         </div>
       </div>
