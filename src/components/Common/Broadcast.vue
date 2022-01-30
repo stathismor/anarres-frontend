@@ -56,10 +56,10 @@
   font-weight: 500;
 }
 .broadcast-live {
-  background-color: #bf0a261a;
+  background-color: #bf0a2633;
 }
 .broadcast-playlist {
-  background-color: #1c366c1a;
+  background-color: #1c366c33;
 }
 .broadcast-live:hover {
   background-color: #bf0a2666;
