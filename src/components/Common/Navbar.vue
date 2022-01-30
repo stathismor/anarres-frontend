@@ -3,13 +3,12 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img
-          src="../../../assets/img/background.svg"
+          src="../../../assets/img/logo.svg"
           alt=""
-          width="24"
-          height="24"
+          width="150"
+          height="25"
           class="d-inline-block align-text-center"
         />
-        Anarres.fm
       </a>
       <ul class="navbar-nav">
         <li class="nav-item">

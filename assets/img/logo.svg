@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="3000"
+   height="500"
+   viewBox="0 0 3000 500"
+   enable-background="new 0 0 1000 1000"
+   xml:space="preserve"
+   id="svg79"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:i="&amp;#38;#38;ns_ai;"><metadata
+   id="metadata85"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs83" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="2560"
+   inkscape:window-height="1371"
+   id="namedview81"
+   showgrid="false"
+   units="px"
+   inkscape:zoom="0.392"
+   inkscape:cx="1522.9592"
+   inkscape:cy="-275.5102"
+   inkscape:window-x="2560"
+   inkscape:window-y="32"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1"
+   inkscape:document-rotation="0"
+   inkscape:pagecheckerboard="0" />
+<switch
+   id="switch77">
+	<foreignObject
+   requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
+   x="0"
+   y="0"
+   width="1"
+   height="1">
+		
+	</foreignObject>
+	<g
+   i:extraneous="self"
+   id="g75">
+		<g
+   id="Layer_1">
+			<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="443.83841"
+   y1="494.01416"
+   x2="288.89752"
+   y2="657.30377"
+   gradientTransform="matrix(0.88836066,0,0,0.88836066,-222.28681,-110.07398)">
+				<stop
+   offset="0"
+   style="stop-color:#CD2433"
+   id="stop2" />
+				<stop
+   offset="0.0138"
+   style="stop-color:#C82331"
+   id="stop4" />
+				<stop
+   offset="0.1044"
+   style="stop-color:#B8212B"
+   id="stop6" />
+				<stop
+   offset="0.1976"
+   style="stop-color:#AF2027"
+   id="stop8" />
+				<stop
+   offset="0.297"
+   style="stop-color:#AC1F26"
+   id="stop10" />
+				<stop
+   offset="0.5556"
+   style="stop-color:#9A1C22"
+   id="stop12" />
+				<stop
+   offset="0.7909"
+   style="stop-color:#89191B"
+   id="stop14" />
+				<stop
+   offset="1"
+   style="stop-color:#781616"
+   id="stop16" />
+			</linearGradient>
+			<circle
+   fill="url(#SVGID_1_)"
+   cx="101.48956"
+   cy="398.95493"
+   r="101.15585"
+   id="circle19"
+   style="fill:url(#SVGID_1_);stroke-width:0.888361" />
+			<linearGradient
+   id="SVGID_2_"
+   gradientUnits="userSpaceOnUse"
+   x1="836.66486"
+   y1="190.49963"
+   x2="527.5636"
+   y2="500.36569"
+   gradientTransform="matrix(0.90151884,0,0,0.90151884,-255.21821,-170.51477)">
+				<stop
+   offset="0"
+   style="stop-color:#2CABE2"
+   id="stop21" />
+				<stop
+   offset="0.0215"
+   style="stop-color:#2BA7DF"
+   id="stop23" />
+				<stop
+   offset="0.1044"
+   style="stop-color:#279BD7"
+   id="stop25" />
+				<stop
+   offset="0.1899"
+   style="stop-color:#2694D2"
+   id="stop27" />
+				<stop
+   offset="0.2809"
+   style="stop-color:#2592D0"
+   id="stop29" />
+				<stop
+   offset="0.5395"
+   style="stop-color:#247ABF"
+   id="stop31" />
+				<stop
+   offset="0.7747"
+   style="stop-color:#2E62AE"
+   id="stop33" />
+				<stop
+   offset="1"
+   style="stop-color:#344A9D"
+   id="stop35" />
+			</linearGradient>
+			<path
+   fill="url(#SVGID_2_)"
+   d="m 500.32034,165.24781 c 0,91.13723 -73.88394,165.0203 -165.01938,165.0203 -91.13814,0 -165.02031,-73.88307 -165.02031,-165.0203 0,-91.138153 73.88307,-165.02032271 165.02031,-165.02032271 C 426.4364,0.22835154 500.32034,74.110557 500.32034,165.24781 Z"
+   id="path38"
+   style="fill:url(#SVGID_2_);stroke-width:0.901521" />
+			<rect
+   x="161.92799"
+   y="433.34601"
+   fill="none"
+   width="589.586"
+   height="107.87"
+   id="rect40" />
+			
+				
+			<rect
+   x="572.38098"
+   y="562.46301"
+   fill="none"
+   width="110.441"
+   height="223.424"
+   id="rect44" />
+			
+			<rect
+   x="161.92799"
+   y="52.776001"
+   fill="none"
+   width="672.40698"
+   height="113.268"
+   id="rect70" />
+		<text
+   fill="#ffffff"
+   stroke="#ffffff"
+   stroke-miterlimit="10"
+   font-family="Aka-AcidGR-Poiret"
+   font-size="121.46px"
+   id="text46"
+   x="580.06256"
+   y="419.69977"
+   style="font-size:561.08px;stroke-width:2.9223">anarres.fm</text></g>
+		<g
+   id="Layer_2">
+		</g>
+		<g
+   id="Layer_3">
+		</g>
+	</g>
+</switch>
+
+</svg>
