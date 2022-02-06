@@ -18,7 +18,7 @@
         <div class="fw-bold">{{ title }}</div>
       </div>
       <div>
-        <a :href="getMixCloud">{{ producer }}</a>
+        <a :href="getMixCloud" target="_blank">{{ producer }}</a>
       </div>
     </div>
   </div>
@@ -110,6 +110,9 @@ import { Component, Vue } from 'vue-property-decorator';
         naboer: 'https://www.mixcloud.com/naboer0/',
         phren: 'https://www.mixcloud.com/phrenic/',
         winter: 'https://www.mixcloud.com/cosmodvck/',
+        ΜαΓιώ: 'https://www.mixcloud.com/itscosmiccandy/',
+        victoria: 'https://www.mixcloud.com/4741292/uploads/',
+        saf: 'https://www.mixcloud.com/post_engineering/',
       };
       return mixClouds[this.producer];
     },
