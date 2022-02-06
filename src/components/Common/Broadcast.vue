@@ -17,14 +17,19 @@
       <div class="broadcast-title">
         <div class="fw-bold">{{ title }}</div>
       </div>
-      <div>
+      <div v-if="isLive">
         <a :href="getMixCloud" target="_blank">{{ producer }}</a>
       </div>
+      <span v-else class="tag">{{ tags }}</span>
     </div>
   </div>
 </template>
 
 <style scoped>
+.tag {
+  color: grey;
+  font-size: 0.75rem;
+}
 .broadcast-container {
   /* display: flex; */
   /* flex-direction: column; */
@@ -93,7 +98,6 @@ import { Component, Vue } from 'vue-property-decorator';
     },
     producer: {
       type: String,
-      required: true,
     },
     time: {
       type: String,
@@ -101,6 +105,9 @@ import { Component, Vue } from 'vue-property-decorator';
     },
     isLive: {
       type: Boolean,
+    },
+    tags: {
+      type: String,
     },
   },
   computed: {

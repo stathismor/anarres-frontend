@@ -98,22 +98,22 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Darkjazz, Noir Jazz, Nu Jazz"
+              tags="Darkjazz, Noir Jazz, Nu Jazz"
               title="Smokey bars and single malts"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="Indie, Alternative, Punk"
+              tags="Indie, Alternative, Punk"
               title="Early Neural Activations"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="Folk and Chill"
+              tags="Folk and Chill"
               title="Noonwraith"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="Synthwave, Coldwave, Darkwave"
+              tags="Synthwave, Coldwave, Darkwave"
               title="Ganuma de Anarres"
               time="18:00 - 21:00"
             />
@@ -144,22 +144,22 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Atmospheric Black/Doom Metal"
+              tags="Atmospheric Black/Doom Metal"
               title="Dying after Midnight"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="IDM Ambient, Future Garage"
+              tags="IDM Ambient, Future Garage"
               title="Echoes in the Exoshpere"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="Post Punk, New Wave"
+              tags="Post Punk, New Wave"
               title="Dancing in a Batcave"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="Post Hardcore, Blackgaze, Post Metal"
+              tags="Post Hardcore, Blackgaze, Post Metal"
               title="Black is the Warmest Colour"
               time="18:00 - 00:00"
             />
@@ -172,22 +172,22 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Slow and Depressive"
+              tags="Slow and Depressive"
               title="Depression in a can"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="Psych Folk, Acid Folk"
+              tags="Psych Folk, Acid Folk"
               title="Acid Vibrations"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="Post Rock"
+              tags="Post Rock"
               title="Long name!For.Post.Playlist"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="Psychedelic, Garage, World Vibes"
+              tags="Psychedelic, Garage, World Vibes"
               title="Psychonautics"
               time="18:00 - 21:00"
             />
@@ -200,27 +200,27 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Atmospheric Black/Doom Metal"
+              tags="Atmospheric Black/Doom Metal"
               title="Dying after Midnight"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="Dungeon Synth/Ambient"
+              tags="Dungeon Synth/Ambient"
               title="Dungeons, Synths and Irene"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="Post Punk, New Wave"
+              tags="Post Punk, New Wave"
               title="Dancing in a Batcave"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="Post Hardcore, Blackgaze, Post Metal"
+              tags="Post Hardcore, Blackgaze, Post Metal"
               title="Black is the Warmest Colour"
               time="18:00 - 22:00"
             />
             <broadcast
-              producer="winter"
+              tags="winter"
               title="Cosmodvck"
               time="22:00 - 23:00"
               :isLive="true"
@@ -240,22 +240,22 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Darkjazz, Noir Jazz, Nu Jazz"
+              tags="Darkjazz, Noir Jazz, Nu Jazz"
               title="Smokey bars and single malts"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="Psych Folk, Acid Folk"
+              tags="Psych Folk, Acid Folk"
               title="Acid Vibrations"
               time="06:00 - 12:00"
             />
             <broadcast
-              producer="Post Punk, New Wave"
+              tags="Post Punk, New Wave"
               title="Dancing in a Batcave"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="Power/Heavy/Thrash Metal"
+              tags="Power/Heavy/Thrash Metal"
               title="Steel Life"
               time="18:00 - 00:00"
             />
@@ -268,12 +268,12 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Slow and Depressive"
+              tags="Slow and Depressive"
               title="Depression in a can"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="Dungeon Synth/Ambient"
+              tags="Dungeon Synth/Ambient"
               title="Dungeons, Synths and Irene"
               time="06:00 - 12:00"
             />
@@ -284,12 +284,12 @@
               :isLive="true"
             />
             <broadcast
-              producer="Folk and Chill"
+              tags="Folk and Chill"
               title="Noonwraith"
               time="13:00 - 18:00"
             />
             <broadcast
-              producer="Psychedelic, Garage, World Vibes"
+              tags="Psychedelic, Garage, World Vibes"
               title="Psychonautics"
               time="18:00 - 00:00"
             />
@@ -302,27 +302,27 @@
         >
           <div class="schedule-day">
             <broadcast
-              producer="Darkjazz, Noir Jazz, Nu Jazz"
+              tags="Darkjazz, Noir Jazz, Nu Jazz"
               title="Smokey bars and single malts"
               time="00:00 - 06:00"
             />
             <broadcast
-              producer="Indie, Alternative, Punk"
+              tags="Indie, Alternative, Punk"
               title="Early Neural Activations"
               time="06:00 - 10:00"
             />
             <broadcast
-              producer=""
+              tags=""
               title="Guest Playlist (victoria)"
               time="10:00 - 12:00"
             />
             <broadcast
-              producer="Post Rock"
+              tags="Post Rock"
               title="Long name!For.Post.Playlist"
               time="12:00 - 18:00"
             />
             <broadcast
-              producer="Synthwave, Coldwave, Darkwave"
+              tags="Synthwave, Coldwave, Darkwave"
               title="Ganuma de Anarres"
               time="18:00 - 20:00"
             />
@@ -333,7 +333,7 @@
               :isLive="true"
             />
             <broadcast
-              producer=""
+              tags=""
               title="Guest Playlist (victoria)"
               time="22:00 - 00:00"
             />
