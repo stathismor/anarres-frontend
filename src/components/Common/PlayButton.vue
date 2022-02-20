@@ -1,35 +1,37 @@
 <template>
   <a href="#" @click.prevent="toggle" :title="langTitle">
-    <icon :icon="icon"></icon>
+    <i class="material-icons play-button" aria-hidden="true">{{ icon }}</i>
+    <!-- <icon :icon="icon"></icon> -->
   </a>
 </template>
 
 <style scoped>
 a {
   color: var(--secondary-color);
-  font-size: 48px;
   line-height: 0;
 }
-
+.play-button {
+  font-size: 85px;
+}
 a:hover {
   color: var(--secondary-color);
 }
 
 @media (max-width: 575px) {
-  a {
-    font-size: 32px;
+  .play-button {
+    font-size: 52px;
   }
 }
 </style>
 
 <script>
-import Icon from './Icon';
+// import Icon from './Icon';
 import getUrlWithoutQuery from '../../functions/getUrlWithoutQuery';
 import store from '../../store.js';
 
 export default {
   name: 'PlayButton',
-  components: { Icon },
+  components: {},
   props: {
     url: String,
     isStream: {
