@@ -25,21 +25,35 @@
       </p>
       <p>Against every kind of oppression.</p>
     </div>
-    <div class="social-container">
-      <div class="title">Find us</div>
-      <div class="card-group social-items">
-        <div class="card social-item bg-transparent">
-          <div class="card-body social-body">
-            <a href="#" class="icon" title="Facebook">
-              <i class="fab fa-facebook fa-2x"></i>
-            </a>
+    <div class="footer-container">
+      <div class="footer-item">
+        <div class="title">Find us</div>
+        <div class="card-group social-items">
+          <div class="card social-item bg-transparent">
+            <div class="card-body social-body">
+              <a href="#" class="icon" title="Facebook">
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card social-item bg-transparent">
+            <div class="card-body social-body">
+              <a href="#" class="icon" title="Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card social-item bg-transparent">
+            <div class="card-body social-body"></div>
           </div>
         </div>
+      </div>
+
+      <div class="footer-item">
+        <div class="title">Donate</div>
         <div class="card social-item bg-transparent">
           <div class="card-body social-body">
-            <a href="#" class="icon" title="Instagram">
-              <i class="fab fa-instagram fa-2x"></i>
-            </a>
+            <paypal />
           </div>
         </div>
       </div>
@@ -65,12 +79,21 @@
 .quote {
   font-size: max(1em, 2vw);
 }
-.social-container {
+
+.footer-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: 10rem;
   margin-top: auto;
   margin-bottom: 7rem;
+}
+
+.footer-item {
+  /* display: flex;
+  flex-direction: column;
+  width: 10rem;
+  margin-top: auto;
+  margin-bottom: 7rem; */
   /* font-size: 20rem; */
 }
 .title {
@@ -98,7 +121,7 @@ a:hover {
     height: 2.5rem;
   }
 
-  .social-container {
+  .footer-container {
     margin-bottom: 5rem;
     /* font-size: 20rem; */
   }

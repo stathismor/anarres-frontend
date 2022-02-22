@@ -1,46 +1,22 @@
 <template>
-  <div ref="paypal"></div>
+  <div style="width: 20%">
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="hosted_button_id" value="5P4XYAKZQM5VA" />
+      <button type="submit" id="completed-task" class="fabutton">
+        <i class="fab fa-paypal fa-2x"></i>
+      </button>
+      <a href="#" class="icon" title="Instagram">
+        <!-- <font-awesome-icon icon="fa-brands fa-paypal" /> -->
+      </a>
+    </form>
+  </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      order: {
-        description: 'Buy thing',
-        amount: {
-          currency_code: 'USD',
-          value: 1000,
-        },
-      },
-    };
-  },
-  mounted: function () {
-    const script = document.createElement('script');
-    const ClientID = '34U9EFS93HW6Q';
-    script.src = `https://www.paypal.com/sdk/js?client-id=${ClientID}`;
-    script.addEventListener('load', this.setLoaded);
-    document.body.appendChild(script);
-  },
-  methods: {
-    setLoaded: function () {
-      window.paypal
-        .Buttons({
-          createOrder: (data, actions) => {
-            return actions.order.create({
-              purchase_units: [this.order],
-            });
-          },
-          onApprove: async (data, actions) => {
-            const order = await actions.order.capture();
-            // ajax request
-          },
-          onError: (err) => {
-            console.log(err);
-          },
-        })
-        .render(this.$refs.paypal);
-    },
-  },
-};
-</script>
+<style scoped>
+.fabutton {
+  background: none;
+  color: var(--foreground-color);
+  padding: 0px;
+  border: none;
+}
+</style>
