@@ -112,6 +112,7 @@
 }
 .social-item {
   margin-bottom: 0;
+  border: none;
 }
 a:hover {
   color: var(--secondary-color);

@@ -1,15 +1,5 @@
 <template>
-  <div style="width: 20%">
-    <form action="https://www.paypal.com/donate" method="post" target="_top">
-      <input type="hidden" name="hosted_button_id" value="5P4XYAKZQM5VA" />
-      <button type="submit" id="completed-task" class="fabutton">
-        <i class="fab fa-paypal fa-2x"></i>
-      </button>
-      <a href="#" class="icon" title="Instagram">
-        <!-- <font-awesome-icon icon="fa-brands fa-paypal" /> -->
-      </a>
-    </form>
-  </div>
+  <div id="donate-button-container"></div>
 </template>
 
 <style scoped>
@@ -20,3 +10,49 @@
   border: none;
 }
 </style>
+
+<script>
+import paypalImage from '/assets/img/paypal.png';
+
+export default {
+  mounted: function () {
+    const script = document.createElement('script');
+    script.src = 'https://www.paypalobjects.com/donate/sdk/donate-sdk.js';
+    script.addEventListener('load', this.setLoaded);
+    document.body.appendChild(script);
+  },
+  methods: {
+    setLoaded: function () {
+      window.PayPal.Donation.Button({
+        env: 'production',
+        hosted_button_id: 'UDTQUKA3SGJH8',
+        image: {
+          src: paypalImage,
+          alt: 'Donate with PayPal button',
+          title: 'Donate to anarres fm!',
+        },
+      }).render('#donate-button-container');
+
+      // HACK: Major one
+      let currentWidth = window.innerWidth;
+      const mediaQuery = window.matchMedia('(max-width: 575px)');
+      if (mediaQuery.matches) {
+        document.getElementById('donate-button').style.width = '24px';
+        document.getElementById('donate-button').style.height = '24px';
+      }
+
+      window.addEventListener('resize', function (event) {
+        if (window.innerWidth < 575 && currentWidth > 575) {
+          currentWidth = window.innerWidth;
+          document.getElementById('donate-button').style.width = '24px';
+          document.getElementById('donate-button').style.height = '24px';
+        } else if (window.innerWidth > 575 && currentWidth < 575) {
+          currentWidth = window.innerWidth;
+          document.getElementById('donate-button').style.width = '32px';
+          document.getElementById('donate-button').style.height = '32px';
+        }
+      });
+    },
+  },
+};
+</script>
