@@ -1,5 +1,7 @@
 <template>
-  <div id="donate-button-container"></div>
+  <keep-alive>
+    <div id="donate-button-container"></div>
+  </keep-alive>
 </template>
 
 <style scoped>
@@ -16,20 +18,22 @@ import paypalImage from '/assets/img/paypal.png';
 
 export default {
   mounted: function () {
-    const script = document.createElement('script');
+    let script = document.createElement('script');
     script.src = 'https://www.paypalobjects.com/donate/sdk/donate-sdk.js';
     script.addEventListener('load', this.setLoaded);
     document.body.appendChild(script);
   },
+
   methods: {
     setLoaded: function () {
+      // TODO: This throws an error on second load, but not sure how to get rid of it
       window.PayPal.Donation.Button({
         env: 'production',
-        hosted_button_id: 'UDTQUKA3SGJH8',
+        hosted_button_id: 'M8KDJTHRP5C9C',
         image: {
           src: paypalImage,
           alt: 'Donate with PayPal button',
-          title: 'Donate to anarres fm!',
+          title: 'Donate to Anarres fm!',
         },
       }).render('#donate-button-container');
 

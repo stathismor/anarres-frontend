@@ -11,23 +11,13 @@
         />
       </a>
       <ul class="navbar-nav">
-        <li class="nav-item" @click.prevent="setActive('home')">
-          <router-link
-            class="nav-link"
-            :class="{
-              active: isActive('home'),
-            }"
-            to="/"
+        <li class="nav-item">
+          <router-link class="nav-link" active-class="active" to="/" exact
             >Home</router-link
           >
         </li>
-        <li class="nav-item" @click.prevent="setActive('about')">
-          <router-link
-            class="nav-link"
-            :class="{
-              active: isActive('about'),
-            }"
-            to="/about"
+        <li class="nav-item">
+          <router-link class="nav-link" active-class="active" to="/about"
             >About</router-link
           >
         </li>
@@ -45,21 +35,3 @@
     0 1px 5px 0 var(--background-color);
 }
 </style>
-
-<script>
-export default {
-  data() {
-    return {
-      activeItem: 'home',
-    };
-  },
-  methods: {
-    isActive(menuItem) {
-      return this.activeItem === menuItem;
-    },
-    setActive(menuItem) {
-      this.activeItem = menuItem;
-    },
-  },
-};
-</script>
