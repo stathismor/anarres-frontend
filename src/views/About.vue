@@ -74,6 +74,7 @@
   text-align: justify;
   font-style: italic;
   flex-grow: 1;
+  padding-bottom: 7rem;
   /* font-size: 1.5rem; */
 }
 .quote {
