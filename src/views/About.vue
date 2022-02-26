@@ -122,7 +122,7 @@ a:hover {
   }
 
   .about {
-    padding-bottom: 7rem;
+    padding-bottom: 8rem;
   }
 }
 </style>
