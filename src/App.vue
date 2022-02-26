@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script type="text/javascript">
+<script>
 import RadioPlayer from './components/Public/RadioPlayer.vue';
 import Navbar from './components/Common/Navbar.vue';
 export default {
@@ -20,11 +20,30 @@ export default {
     Navbar,
     RadioPlayer,
   },
+  methods: {
+    appHeight() {
+      document.documentElement.style.setProperty(
+        '--app-height',
+        `${window.innerHeight}px`
+      );
+    },
+  },
+  created() {
+    window.addEventListener('resize', this.appHeight);
+    this.appHeight();
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.appHeight);
+  },
 };
 </script>
 
 <style>
 @import '../assets/css/variables.css';
+
+:root {
+  height: var(--app-height);
+}
 
 body {
   margin: 0;
