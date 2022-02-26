@@ -74,6 +74,7 @@
   text-align: justify;
   font-style: italic;
   flex-grow: 1;
+  margin-bottom: 7rem;
   /* font-size: 1.5rem; */
 }
 .quote {
@@ -85,7 +86,6 @@
   /* flex-direction: column; */
   width: 10rem;
   margin-top: auto;
-  margin-bottom: 7rem;
 }
 
 .footer-item {
@@ -122,7 +122,7 @@ a:hover {
     height: 2.5rem;
   }
 
-  .footer-container {
+  .about {
     margin-bottom: 5rem;
     /* font-size: 20rem; */
   }
