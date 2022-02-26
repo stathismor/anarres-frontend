@@ -96,7 +96,7 @@ body {
 }
 @media (max-width: 575px) {
   #app {
-    height: 90vh;
+    height: 80vh;
     /* font-size: 20rem; */
   }
 }
