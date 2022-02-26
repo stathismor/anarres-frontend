@@ -122,7 +122,7 @@ a:hover {
   }
 
   .about {
-    height: 80vh;
+    height: 70vh;
   }
 }
 </style>
