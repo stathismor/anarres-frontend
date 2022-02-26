@@ -66,7 +66,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
   /* flex-grow: 1; */
   /* margin-bottom: 7rem; */
 }
@@ -93,11 +93,5 @@ body {
 
   /* Support for IE. */
   font-feature-settings: 'liga';
-}
-@media (max-width: 575px) {
-  #app {
-    height: 80vh;
-    /* font-size: 20rem; */
-  }
 }
 </style>

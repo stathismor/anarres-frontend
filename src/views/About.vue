@@ -120,6 +120,10 @@ a:hover {
   .social-item {
     height: 2.5rem;
   }
+
+  .about {
+    height: 80vh;
+  }
 }
 </style>
 
