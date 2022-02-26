@@ -11,10 +11,16 @@
   padding: 0px;
   border: none;
 }
+
+#donate-button:hover {
+  width: 15px;
+  color: red;
+}
 </style>
 
 <script>
 import paypalImage from '/assets/img/paypal.png';
+import paypalImageRed from '/assets/img/paypal_red.png';
 
 export default {
   mounted: function () {
@@ -36,6 +42,14 @@ export default {
           title: 'Donate to Anarres fm!',
         },
       }).render('#donate-button-container');
+
+      const image = document.getElementById('donate-button');
+      image.onmouseover = function () {
+        this.src = paypalImageRed;
+      };
+      image.onmouseleave = function () {
+        this.src = paypalImage;
+      };
 
       // HACK: Major one
       let currentWidth = window.innerWidth;
