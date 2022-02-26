@@ -96,7 +96,7 @@ body {
 }
 @media (max-width: 575px) {
   #app {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
     /* font-size: 20rem; */
   }
 }
