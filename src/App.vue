@@ -53,6 +53,7 @@ body {
   text-align: center;
   overflow-y: scroll;
   flex-grow: 1;
+  margin-bottom: 7rem;
 }
 .material-icons {
   font-family: 'Material Icons';
@@ -77,5 +78,11 @@ body {
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+}
+@media (max-width: 575px) {
+  #app {
+    margin-bottom: 5rem;
+    /* font-size: 20rem; */
+  }
 }
 </style>

@@ -74,7 +74,6 @@
   text-align: justify;
   font-style: italic;
   flex-grow: 1;
-  margin-bottom: 7rem;
   /* font-size: 1.5rem; */
 }
 .quote {
@@ -120,11 +119,6 @@ a:hover {
 @media (max-width: 575px) {
   .social-item {
     height: 2.5rem;
-  }
-
-  .about {
-    margin-bottom: 5rem;
-    /* font-size: 20rem; */
   }
 }
 </style>
