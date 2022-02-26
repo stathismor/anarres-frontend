@@ -67,7 +67,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   overflow-y: scroll;
-  /* flex-grow: 1; */
+  flex-grow: 1;
   /* margin-bottom: 7rem; */
 }
 .material-icons {

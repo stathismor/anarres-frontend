@@ -122,7 +122,7 @@ a:hover {
   }
 
   .about {
-    height: 70vh;
+    padding-bottom: 7rem;
   }
 }
 </style>
