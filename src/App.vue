@@ -20,21 +20,21 @@ export default {
     Navbar,
     RadioPlayer,
   },
-  methods: {
-    resize() {
-      // We execute the same script as before
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    },
-  },
-  created() {
-    // We listen to the resize event
-    window.addEventListener('resize', this.resize);
-    this.resize();
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.resize);
-  },
+  // methods: {
+  //   resize() {
+  //     // We execute the same script as before
+  //     const vh = window.innerHeight * 0.01;
+  //     document.documentElement.style.setProperty('--vh', `${vh}px`);
+  //   },
+  // },
+  // created() {
+  //   // We listen to the resize event
+  //   window.addEventListener('resize', this.resize);
+  //   this.resize();
+  // },
+  // beforeDestroy() {
+  //   window.removeEventListener('resize', this.resize);
+  // },
 };
 </script>
 
@@ -42,9 +42,9 @@ export default {
 @import '../assets/css/variables.css';
 body {
   margin: 0;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  /* height: calc(var(--vh, 1vh) * 100); */
   background-color: var(--background-color) !important;
   background: var(--background-color) url(../assets/img/background.svg)
     no-repeat center center;
@@ -67,8 +67,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   /* overflow-y: scroll; */
-  flex-grow: 1;
-  margin-bottom: 7rem;
+  /* flex-grow: 1; */
+  /* margin-bottom: 7rem; */
 }
 .material-icons {
   font-family: 'Material Icons';
@@ -96,7 +96,7 @@ body {
 }
 @media (max-width: 575px) {
   #app {
-    margin-bottom: 7rem;
+    height: 90vh;
     /* font-size: 20rem; */
   }
 }
