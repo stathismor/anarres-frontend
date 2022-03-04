@@ -31,14 +31,24 @@
         <div class="card-group social-items">
           <div class="card social-item bg-transparent">
             <div class="card-body social-body">
-              <a href="#" class="icon" title="Facebook">
+              <a
+                href="https://www.facebook.com/anarres.fm"
+                target="_blank"
+                class="icon"
+                title="Facebook"
+              >
                 <i class="fab fa-facebook fa-2x"></i>
               </a>
             </div>
           </div>
           <div class="card social-item bg-transparent">
             <div class="card-body social-body">
-              <a href="#" class="icon" title="Instagram">
+              <a
+                href="https://www.instagram.com/anarresfm/"
+                target="_blank"
+                class="icon"
+                title="Instagram"
+              >
                 <i class="fab fa-instagram fa-2x"></i>
               </a>
             </div>
