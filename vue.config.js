@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/anarres-frontend/',
+  publicPath: '',
 };
