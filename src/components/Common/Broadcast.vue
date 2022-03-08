@@ -118,7 +118,7 @@ import { Component, Vue } from 'vue-property-decorator';
         phren: 'https://www.mixcloud.com/phrenic/',
         winter: 'https://www.mixcloud.com/cosmodvck/',
         ΜαΓιώ: 'https://www.mixcloud.com/itscosmiccandy/',
-        victoria: 'https://www.mixcloud.com/4741292/uploads/',
+        viktoria: 'https://www.mixcloud.com/4741292/uploads/',
         saf: 'https://www.mixcloud.com/post_engineering/',
       };
       return mixClouds[this.producer];

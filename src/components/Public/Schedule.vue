@@ -220,7 +220,7 @@
               time="18:00 - 22:00"
             />
             <broadcast
-              tags="winter"
+              producer="winter"
               title="Cosmodvck"
               time="22:00 - 23:00"
               :isLive="true"
@@ -275,18 +275,18 @@
             <broadcast
               tags="Dungeon Synth/Ambient"
               title="Dungeons, Synths and Irene"
-              time="06:00 - 12:00"
+              time="06:00 - 12:30"
             />
             <broadcast
-              producer="victoria"
-              title="Ιντερμέδιο (every second week)"
-              time="12:00 - 13:00"
+              producer="viktoria"
+              title="Ιντερμέδιο (bi-weekly)"
+              time="12:30 - 13:30"
               :isLive="true"
             />
             <broadcast
               tags="Folk and Chill"
               title="Noonwraith"
-              time="13:00 - 18:00"
+              time="13:30 - 18:00"
             />
             <broadcast
               tags="Psychedelic, Garage, World Vibes"
