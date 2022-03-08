@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center; */
   /* min-height: 80vh; */
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 6rem;
 }
 </style>
