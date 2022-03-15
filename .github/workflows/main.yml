@@ -1,6 +1,3 @@
-env:
-  DEPLOY_ENV: gh-pages
-
 name: Build Vue
 on: [push]
 jobs:
