@@ -47,6 +47,7 @@
 export default {
   methods: {
     target(path) {
+      console.log('process.env.DEPLOY_ENV', process.env.DEPLOY_ENV);
       const base =
         process.env.DEPLOY_ENV === 'gh-pages' ? '/anarres-frontend' : '';
       return `${base}${path}`;
