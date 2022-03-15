@@ -1,3 +1,6 @@
+env:
+  DEPLOY_ENV: gh-pages
+
 name: Build Vue
 on: [push]
 jobs:
@@ -5,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
-    - uses: actions/checkout@v2
-    - id: Build-Vue
-      uses: xRealNeon/VuePagesAction@1.0.1
-      with:
-        username: 'stathismor'
-        reponame: 'anarres-frontend'
-        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchange
+      - uses: actions/checkout@v2
+      - id: Build-Vue
+        uses: xRealNeon/VuePagesAction@1.0.1
+        with:
+          username: 'stathismor'
+          reponame: 'anarres-frontend'
+          token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchange
