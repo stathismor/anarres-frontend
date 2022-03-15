@@ -1,6 +1,9 @@
 <template>
   <div class="container container-sm schedule-container">
-    <h3 class="text-light fw-bold schedule-title">Schedule</h3>
+    <div class="schedule-title-container">
+      <h3 class="text-light fw-bold schedule-title">Schedule</h3>
+      <h16 class="schedule-title schedule-title-timezone">(EET)</h16>
+    </div>
     <div class="card bg-transparent border-0 h-100">
       <div class="card-header border-bottom-0 schedule-header">
         <ul class="nav nav-tabs card-header-tabs border-bottom border-3">
@@ -351,9 +354,18 @@
 .schedule-header {
   padding-top: 0;
 }
+.schedule-title-container {
+  display: flex;
+  justify-content: center;
+}
 .schedule-title {
   margin-top: 1rem;
   line-height: 1rem;
+}
+.schedule-title-timezone {
+  color: gray;
+  margin-left: 0.5rem;
+  font-size: 15px;
 }
 .schedule-day {
   height: 100%;
@@ -363,6 +375,9 @@
 @media (max-width: 575px) {
   .schedule-container {
     font-size: 90%;
+  }
+  .schedule-title-timezone {
+    font-size: 10px;
   }
 }
 </style>
