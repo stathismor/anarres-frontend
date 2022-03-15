@@ -12,12 +12,19 @@
       </a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link" active-class="active" to="/" exact
+          <router-link
+            class="nav-link"
+            active-class="active"
+            :to="target('/')"
+            exact
             >Home</router-link
           >
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" active-class="active" to="/about"
+          <router-link
+            class="nav-link"
+            active-class="active"
+            :to="target('/about')"
             >About</router-link
           >
         </li>
@@ -35,3 +42,15 @@
     0 1px 5px 0 var(--background-color);
 }
 </style>
+
+<script>
+export default {
+  methods: {
+    target(path) {
+      const base =
+        process.env.DEPLOY_ENV === 'gh-pages' ? '/anarres-frontend' : '';
+      return `${base}${path}`;
+    },
+  },
+};
+</script>
