@@ -157,8 +157,8 @@
               time="06:00 - 12:00"
             />
             <broadcast
-              tags="Post Punk, New Wave"
-              title="Dancing in a Batcave"
+              tags="Experimental, Electronic, Pop"
+              title="Urban Melancholy"
               time="12:00 - 18:00"
             />
             <broadcast
@@ -192,7 +192,7 @@
             <broadcast
               tags="Psychedelic, Garage, World Vibes"
               title="Psychonautics"
-              time="18:00 - 21:00"
+              time="18:00 - 00:00"
             />
           </div>
         </div>
@@ -213,14 +213,20 @@
               time="06:00 - 12:00"
             />
             <broadcast
-              tags="Post Punk, New Wave"
-              title="Dancing in a Batcave"
+              tags="Experimental, Electronic, Pop"
+              title="Urban Melancholy"
               time="12:00 - 18:00"
             />
             <broadcast
               tags="Post Hardcore, Blackgaze, Post Metal"
               title="Black is the Warmest Colour"
-              time="18:00 - 22:00"
+              time="18:00 - 21:00"
+            />
+            <broadcast
+              producer="saf"
+              title="Post-Engineering (bi-weekly)"
+              time="21:00 - 22:00"
+              :isLive="true"
             />
             <broadcast
               producer="winter"
@@ -260,7 +266,18 @@
             <broadcast
               tags="Power/Heavy/Thrash Metal"
               title="Steel Life"
-              time="18:00 - 00:00"
+              time="18:00 - 20:00"
+            />
+            <broadcast
+              producer="Preacher Boys"
+              title="Past Forward"
+              time="20:00 - 22:00"
+              :isLive="true"
+            />
+            <broadcast
+              tags="Power/Heavy/Thrash Metal"
+              title="Steel Life"
+              time="22:00 - 00:00"
             />
           </div>
         </div>
@@ -305,8 +322,8 @@
         >
           <div class="schedule-day">
             <broadcast
-              tags="Darkjazz, Noir Jazz, Nu Jazz"
-              title="Smokey bars and single malts"
+              tags="Synthwave, Post Punk, Darkwave"
+              title="Decadent Futures"
               time="00:00 - 06:00"
             />
             <broadcast
@@ -330,10 +347,9 @@
               time="18:00 - 20:00"
             />
             <broadcast
-              producer="saf"
-              title="post-engineering"
+              tags=""
+              title="Guest Playlist (Post_Engineering)"
               time="20:00 - 22:00"
-              :isLive="true"
             />
             <broadcast
               tags=""
