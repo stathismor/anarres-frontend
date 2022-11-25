@@ -164,7 +164,18 @@
             <broadcast
               tags="Post Hardcore, Blackgaze, Post Metal"
               title="Black is the Warmest Colour"
-              time="18:00 - 00:00"
+              time="18:00 - 22:00"
+            />
+            <broadcast
+              producer="zois"
+              title="Recap"
+              time="22:00 - 23:00"
+              :isLive="true"
+            />
+            <broadcast
+              tags="Post Hardcore, Blackgaze, Post Metal"
+              title="Black is the Warmest Colour"
+              time="23:00 - 00:00"
             />
           </div>
         </div>
@@ -266,18 +277,7 @@
             <broadcast
               tags="Power/Heavy/Thrash Metal"
               title="Steel Life"
-              time="18:00 - 20:00"
-            />
-            <broadcast
-              producer="Preacher Boys"
-              title="Past Forward"
-              time="20:00 - 22:00"
-              :isLive="true"
-            />
-            <broadcast
-              tags="Power/Heavy/Thrash Metal"
-              title="Steel Life"
-              time="22:00 - 00:00"
+              time="18:00 - 00:00"
             />
           </div>
         </div>
@@ -349,12 +349,18 @@
             <broadcast
               tags=""
               title="Guest Playlist (Post_Engineering)"
-              time="20:00 - 22:00"
+              time="20:00 - 21:00"
+            />
+            <broadcast
+              producer="Preacher Boys"
+              title="Past Forward"
+              time="21:00 - 23:00"
+              :isLive="true"
             />
             <broadcast
               tags=""
               title="Guest Playlist (victoria)"
-              time="22:00 - 00:00"
+              time="23:00 - 00:00"
             />
           </div>
         </div>

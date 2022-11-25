@@ -120,6 +120,8 @@ import { Component, Vue } from 'vue-property-decorator';
         ΜαΓιώ: 'https://www.mixcloud.com/itscosmiccandy/',
         viktoria: 'https://www.mixcloud.com/4741292/uploads/',
         saf: 'https://www.mixcloud.com/post_engineering/',
+        zois: 'https://www.mixcloud.com/paparoup/',
+        'Preacher Boys': 'https://www.mixcloud.com/gusboggar/',
       };
       return mixClouds[this.producer];
     },
