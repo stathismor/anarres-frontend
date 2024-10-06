@@ -127,16 +127,15 @@
               :isLive="true"
             />
             <broadcast
-              producer="phren"
-              title="Psychomagic"
+              producer="naboer"
+              title="Umbra"
               time="22:00 - 23:00"
               :isLive="true"
             />
             <broadcast
-              producer="Filthy Pagan"
-              title="Saturnalia"
+              tags="Synthwave, Coldwave, Darkwave"
+              title="Ganuma de Anarres"
               time="23:00 - 00:00"
-              :isLive="true"
             />
           </div>
         </div>
@@ -166,6 +165,12 @@
               title="Black is the Warmest Colour"
               time="18:00 - 22:00"
             />
+            <!-- <broadcast
+              producer="thnthr"
+              title="A Gazetteer of Ghost Stories"
+              time="21:00 - 22:00"
+              :isLive="true"
+            /> -->
             <broadcast
               producer="zois"
               title="Recap"
@@ -177,6 +182,12 @@
               title="Black is the Warmest Colour"
               time="23:00 - 00:00"
             />
+            <!-- <broadcast
+              producer="christos"
+              title="klatskuviиa"
+              time="23:00 - 00:00"
+              :isLive="true"
+            /> -->
           </div>
         </div>
         <div
@@ -203,7 +214,25 @@
             <broadcast
               tags="Psychedelic, Garage, World Vibes"
               title="Psychonautics"
-              time="18:00 - 00:00"
+              time="18:00 - 21:00"
+            />
+            <broadcast
+              producer="phren"
+              title="Psychomagic"
+              time="21:00 - 22:00"
+              :isLive="true"
+            />
+            <broadcast
+              producer="Cabal"
+              title="Destroy all Monsters"
+              time="22:00 - 23:00"
+              :isLive="true"
+            />
+            <broadcast
+              producer="Filthy Pagan"
+              title="Saturnalia"
+              time="23:00 - 00:00"
+              :isLive="true"
             />
           </div>
         </div>
@@ -231,25 +260,24 @@
             <broadcast
               tags="Post Hardcore, Blackgaze, Post Metal"
               title="Black is the Warmest Colour"
-              time="18:00 - 21:00"
+              time="18:00 - 22:00"
             />
-            <broadcast
+            <!-- <broadcast
               producer="saf"
               title="Post-Engineering (bi-weekly)"
               time="21:00 - 22:00"
               :isLive="true"
-            />
+            /> -->
             <broadcast
-              producer="winter"
+              producer="winter (bi-weekly)"
               title="Cosmodvck"
               time="22:00 - 23:00"
               :isLive="true"
             />
             <broadcast
-              producer="naboer"
-              title="Umbra"
+              tags="Post Hardcore, Blackgaze, Post Metal"
+              title="Black is the Warmest Colour"
               time="23:00 - 00:00"
-              :isLive="true"
             />
           </div>
         </div>
@@ -279,6 +307,17 @@
               title="Steel Life"
               time="18:00 - 00:00"
             />
+            <!-- <broadcast
+              producer="sapia papia"
+              title="Alchemilla"
+              time="22:00 - 23:00"
+              :isLive="true"
+            /> -->
+            <!-- <broadcast
+              tags="Power/Heavy/Thrash Metal"
+              title="Steel Life"
+              time="23:00 - 00:00"
+            /> -->
           </div>
         </div>
         <div
@@ -337,9 +376,19 @@
               time="10:00 - 12:00"
             />
             <broadcast
+              tags=""
+              title="Guest Playlist (paparoup)"
+              time="12:00 - 14:00"
+            />
+            <broadcast
               tags="Post Rock"
               title="Long name!For.Post.Playlist"
-              time="12:00 - 18:00"
+              time="14:00 - 16:00"
+            />
+            <broadcast
+              tags=""
+              title="Guest Playlist (cabal)"
+              time="16:00 - 18:00"
             />
             <broadcast
               tags="Synthwave, Coldwave, Darkwave"
@@ -349,18 +398,13 @@
             <broadcast
               tags=""
               title="Guest Playlist (Post_Engineering)"
-              time="20:00 - 21:00"
+              time="20:00 - 22:00"
             />
-            <broadcast
-              producer="Preacher Boys"
-              title="Past Forward"
-              time="21:00 - 23:00"
-              :isLive="true"
-            />
+
             <broadcast
               tags=""
               title="Guest Playlist (victoria)"
-              time="23:00 - 00:00"
+              time="22:00 - 00:00"
             />
           </div>
         </div>

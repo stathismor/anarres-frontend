@@ -122,6 +122,8 @@ import { Component, Vue } from 'vue-property-decorator';
         saf: 'https://www.mixcloud.com/post_engineering/',
         zois: 'https://www.mixcloud.com/paparoup/',
         'Preacher Boys': 'https://www.mixcloud.com/gusboggar/',
+        Cabal: 'https://www.mixcloud.com/Cabal_Stgm/',
+        thnthr: 'https://www.mixcloud.com/thnthr/',
       };
       return mixClouds[this.producer];
     },
