@@ -229,11 +229,16 @@
               :isLive="true"
             />
             <broadcast
+              tags="Psychedelic, Garage, World Vibes"
+              title="Psychonautics"
+              time="23:00 - 00:00"
+            />
+            <!-- <broadcast
               producer="Filthy Pagan"
               title="Saturnalia"
               time="23:00 - 00:00"
               :isLive="true"
-            />
+            /> -->
           </div>
         </div>
         <div
