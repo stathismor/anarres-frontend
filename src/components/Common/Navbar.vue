@@ -22,7 +22,9 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Blog</a>
+          <router-link class="nav-link" active-class="active" to="/blog"
+            >Blog</router-link
+          >
         </li>
       </ul>
     </div>
