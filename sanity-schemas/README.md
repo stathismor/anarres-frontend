@@ -73,3 +73,4 @@ Make sure your Sanity project allows requests from your frontend URL:
    - `http://localhost:8080` (development)
    - `https://yourdomain.com` (production)
 
+

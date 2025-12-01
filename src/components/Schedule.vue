@@ -83,14 +83,6 @@ onUnmounted(() => {
     <div class="flex items-baseline justify-center gap-2 mb-4">
       <h2 class="text-2xl font-display font-light tracking-wide lowercase">schedule</h2>
       <span class="text-sm text-white/50 font-light">(EET)</span>
-      <!-- CMS indicator (only in dev) -->
-      <span 
-        v-if="fromSanity" 
-        class="text-xs text-green-400/60 ml-2"
-        title="Loaded from Sanity CMS"
-      >
-        ✓ CMS
-      </span>
     </div>
 
     <!-- Current Time Badge -->
