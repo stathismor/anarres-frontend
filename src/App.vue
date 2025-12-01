@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue'
 import RadioPlayer from '@/components/RadioPlayer.vue'
+import DiscordWidget from '@/components/DiscordWidget.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import RadioPlayer from '@/components/RadioPlayer.vue'
       </router-view>
     </main>
     <RadioPlayer />
+    <DiscordWidget />
   </div>
 </template>
 
