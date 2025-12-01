@@ -1,0 +1,32 @@
+{
+  "name": "Anarres FM",
+  "short_name": "Anarres",
+  "description": "Music with no boundaries. Against every kind of oppression.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#131313",
+  "theme_color": "#bf0a26",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["music", "entertainment"],
+  "shortcuts": [
+    {
+      "name": "Schedule",
+      "url": "/",
+      "description": "View the broadcast schedule"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog",
+      "description": "Read the latest posts"
+    }
+  ]
+}
+
