@@ -29,8 +29,9 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['DM Sans', 'system-ui', 'sans-serif'],
-        display: ['Instrument Serif', 'Georgia', 'serif'],
+        // Josefin Sans matches the Anarres logo's geometric, thin style
+        sans: ['Nunito', 'system-ui', 'sans-serif'],
+        display: ['Josefin Sans', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       backgroundImage: {

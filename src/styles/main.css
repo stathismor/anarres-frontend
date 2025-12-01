@@ -122,9 +122,14 @@
   .animation-delay-400 { animation-delay: 400ms; }
   .animation-delay-500 { animation-delay: 500ms; }
 
-  /* Gradient text */
+  /* Gradient text - matching logo red */
   .text-gradient {
-    @apply bg-gradient-to-r from-secondary to-secondary-light bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-secondary via-secondary-light to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Logo-style text */
+  .logo-text {
+    @apply font-display font-light tracking-wide lowercase;
   }
 
   /* Glow effects */

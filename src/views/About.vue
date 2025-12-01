@@ -17,11 +17,11 @@ const socialLinks = [
   <div class="container mx-auto px-4 py-12 max-w-2xl">
     <!-- Quote -->
     <blockquote class="text-center mb-16 animate-fade-in">
-      <p class="text-xl sm:text-2xl font-display italic text-white/90 leading-relaxed mb-4">
+      <p class="text-xl sm:text-2xl font-display font-light text-white/90 leading-relaxed mb-4 tracking-wide">
         Music with no boundaries. From spacy synths to modern metal sounds, 
         from folk to world sounds.
       </p>
-      <p class="text-lg sm:text-xl font-display italic text-gradient font-semibold animate-slide-up animation-delay-200">
+      <p class="text-lg sm:text-xl font-display text-gradient font-normal tracking-wider animate-slide-up animation-delay-200">
         Against every kind of oppression.
       </p>
     </blockquote>

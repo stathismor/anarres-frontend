@@ -81,8 +81,8 @@ onUnmounted(() => {
   <div class="max-w-xl mx-auto animate-fade-in">
     <!-- Header -->
     <div class="flex items-baseline justify-center gap-2 mb-4">
-      <h2 class="text-2xl font-display font-bold">Schedule</h2>
-      <span class="text-sm text-white/50">(EET)</span>
+      <h2 class="text-2xl font-display font-light tracking-wide lowercase">schedule</h2>
+      <span class="text-sm text-white/50 font-light">(EET)</span>
       <!-- CMS indicator (only in dev) -->
       <span 
         v-if="fromSanity" 
