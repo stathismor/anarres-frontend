@@ -5,8 +5,8 @@ const isOpen = ref(false)
 const isLoaded = ref(false)
 
 // WidgetBot configuration - UPDATE THESE WITH YOUR IDs
-const SERVER_ID = '299922408878841857' // Replace with your Discord server ID
-const CHANNEL_ID = '299922408878841857' // Replace with your default channel ID
+const SERVER_ID = '388072481098825739' // Replace with your Discord server ID
+const CHANNEL_ID = '904279350176800789' // Replace with your default channel ID
 
 function toggleWidget() {
   isOpen.value = !isOpen.value
