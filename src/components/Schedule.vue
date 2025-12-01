@@ -120,13 +120,13 @@ onUnmounted(() => {
 
     <!-- Day Tabs -->
     <div v-else class="card overflow-hidden">
-      <div class="border-b border-white/10 overflow-x-auto scrollbar-hide">
-        <div class="flex min-w-max">
+      <div class="border-b border-white/10">
+        <div class="flex justify-between">
           <button
             v-for="(day, index) in schedule"
             :key="day.id"
             @click="activeDay = day.id"
-            class="px-4 py-3 text-sm font-medium transition-all relative
+            class="flex-1 px-1 sm:px-3 py-3 text-xs sm:text-sm font-medium transition-all relative
                    hover:bg-white/5 animate-fade-in"
             :style="{ animationDelay: `${index * 50}ms` }"
             :class="[
@@ -138,11 +138,13 @@ onUnmounted(() => {
                 : ''
             ]"
           >
-            {{ day.name }}
+            <!-- Short name on mobile, full name on desktop -->
+            <span class="sm:hidden">{{ day.name.slice(0, 3) }}</span>
+            <span class="hidden sm:inline">{{ day.name }}</span>
             <!-- Today indicator dot -->
             <span 
               v-if="day.id === getCurrentDay()" 
-              class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-secondary"
+              class="absolute top-1 right-1 sm:top-2 sm:right-2 w-1.5 h-1.5 rounded-full bg-secondary"
             />
             <div 
               v-if="activeDay === day.id"
