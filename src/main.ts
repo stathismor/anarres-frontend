@@ -1,20 +1,13 @@
-import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
-import { BootstrapVue } from 'bootstrap-vue';
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
+import router from './router'
+import './styles/main.css'
 
-// Import Bootstrap an BootstrapVue CSS files (order is important)
-import '../assets/css/_variables.scss';
-// import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
-import '../assets/css/main.css';
+const app = createApp(App)
 
-// Make BootstrapVue available throughout your project
-Vue.use(BootstrapVue);
+app.use(createPinia())
+app.use(router)
 
-Vue.config.productionTip = false;
+app.mount('#app')
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount('#app');

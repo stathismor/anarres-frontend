@@ -1,28 +1,19 @@
+<script setup lang="ts">
+import Schedule from '@/components/Schedule.vue'
+</script>
+
 <template>
-  <div class="home">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <div class="text-center mb-8 animate-fade-in">
+      <h1 class="text-3xl sm:text-4xl font-display font-bold mb-2">
+        <span class="text-gradient">Anarres FM</span>
+      </h1>
+      <p class="text-white/60 text-sm sm:text-base">
+        Music with no boundaries
+      </p>
+    </div>
+    
     <Schedule />
   </div>
 </template>
-
-<style scoped>
-.home {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* min-height: 80vh; */
-  /* overflow: hidden; */
-  margin-bottom: 6rem;
-}
-</style>
-
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Schedule from '@/components/Public/Schedule.vue';
-
-@Component({
-  components: {
-    Schedule,
-  },
-})
-export default class Home extends Vue {}
-</script>
