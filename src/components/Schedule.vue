@@ -1,13 +1,20 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { schedule, getCurrentDay, mixcloudLinks, type Broadcast } from '@/data/schedule'
+import { schedule as staticSchedule, getCurrentDay, mixcloudLinks as staticMixcloudLinks, type DaySchedule } from '@/data/schedule'
+import { fetchSchedule } from '@/lib/sanity'
 
+// Reactive state
 const activeDay = ref(getCurrentDay())
 const currentTime = ref(new Date())
+const schedule = ref<DaySchedule[]>(staticSchedule)
+const mixcloudLinks = ref<Record<string, string>>(staticMixcloudLinks)
+const isLoading = ref(true)
+const fromSanity = ref(false)
+
 let timeInterval: ReturnType<typeof setInterval> | null = null
 
 const currentSchedule = computed(() => 
-  schedule.find(day => day.id === activeDay.value)
+  schedule.value.find(day => day.id === activeDay.value)
 )
 
 // Parse time string "HH:MM - HH:MM" to check if current
@@ -32,7 +39,7 @@ function isCurrentBroadcast(timeStr: string): boolean {
 function getProducerLink(producer: string | undefined): string | undefined {
   if (!producer) return undefined
   const baseName = producer.replace(/\s*\(.*\)\s*$/, '')
-  return mixcloudLinks[baseName] || mixcloudLinks[producer]
+  return mixcloudLinks.value[baseName] || mixcloudLinks.value[producer]
 }
 
 function formatCurrentTime(): string {
@@ -43,7 +50,23 @@ function formatCurrentTime(): string {
   })
 }
 
+async function loadSchedule() {
+  isLoading.value = true
+  try {
+    const data = await fetchSchedule()
+    schedule.value = data.schedule
+    mixcloudLinks.value = data.mixcloudLinks
+    fromSanity.value = data.fromSanity
+  } catch (error) {
+    console.error('Failed to load schedule:', error)
+    // Keep static data as fallback
+  } finally {
+    isLoading.value = false
+  }
+}
+
 onMounted(() => {
+  loadSchedule()
   timeInterval = setInterval(() => {
     currentTime.value = new Date()
   }, 30000) // Update every 30 seconds
@@ -60,6 +83,14 @@ onUnmounted(() => {
     <div class="flex items-baseline justify-center gap-2 mb-4">
       <h2 class="text-2xl font-display font-bold">Schedule</h2>
       <span class="text-sm text-white/50">(EET)</span>
+      <!-- CMS indicator (only in dev) -->
+      <span 
+        v-if="fromSanity" 
+        class="text-xs text-green-400/60 ml-2"
+        title="Loaded from Sanity CMS"
+      >
+        ✓ CMS
+      </span>
     </div>
 
     <!-- Current Time Badge -->
@@ -76,8 +107,19 @@ onUnmounted(() => {
       </div>
     </div>
 
+    <!-- Loading State -->
+    <div v-if="isLoading" class="card p-8">
+      <div class="flex items-center justify-center gap-3 text-white/50">
+        <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>Loading schedule...</span>
+      </div>
+    </div>
+
     <!-- Day Tabs -->
-    <div class="card overflow-hidden">
+    <div v-else class="card overflow-hidden">
       <div class="border-b border-white/10 overflow-x-auto scrollbar-hide">
         <div class="flex min-w-max">
           <button
