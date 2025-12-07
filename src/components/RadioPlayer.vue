@@ -4,7 +4,6 @@ import { usePlayerStore } from '@/stores/player'
 import { useNowPlayingStore } from '@/stores/nowPlaying'
 import PlayButton from '@/components/PlayButton.vue'
 import VolumeControl from '@/components/VolumeControl.vue'
-import AudioVisualizer from '@/components/AudioVisualizer.vue'
 
 const playerStore = usePlayerStore()
 const npStore = useNowPlayingStore()

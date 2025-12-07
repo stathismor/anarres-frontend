@@ -2,6 +2,11 @@
 import Navbar from '@/components/Navbar.vue'
 import RadioPlayer from '@/components/RadioPlayer.vue'
 import DiscordWidget from '@/components/DiscordWidget.vue'
+import ScrollToTop from '@/components/ScrollToTop.vue'
+import { useKeyboardShortcuts } from '@/composables/useKeyboardShortcuts'
+
+// Initialize keyboard shortcuts
+useKeyboardShortcuts()
 </script>
 
 <template>
@@ -16,6 +21,7 @@ import DiscordWidget from '@/components/DiscordWidget.vue'
     </main>
     <RadioPlayer />
     <DiscordWidget />
+    <ScrollToTop />
   </div>
 </template>
 
